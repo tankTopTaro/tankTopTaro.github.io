@@ -5,22 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Webpage</title>
+    <style>
+        /* 
+            https://colorhunt.co/palette/645cbba084dcbface2ebc7e6
+            PRIMARY:    #645CBB
+            SECONDARY:  #A084DC
+            ACCENT 1:   #BFACE2
+            ACCENT 2:   #EBC7E6
+         
+        .header {
+            background-color: gainsboro;
+            height: 50vh
+        }
+        */ 
+        .header_nav-links {
+            text-decoration: none;
+            color: #EBC7E6;
+        }
+        a:hover{
+            background-color: #A084DC;
+            color: #EBC7E6
+        }
+    </style>
 </head>
-<body style="background-color: gainsboro; text-align: center;">
+<body style="background-color: #645CBB; text-align: left;">
     <!--HEADER SECTION -->
     <header>
-        <div class="header" style="background-color:cadetblue;">
+        <div class="header">
+
+            <!-- NAVIGATION SECTION -->
+            <ul style="list-style-type: none;">
+                <li style="float:left; padding:5px;"><a class="header_nav-links" href="#"> Home</a></li>
+                <li style="float:left; padding:5px;"><a class="header_nav-links" href="#"> Content</a></li>
+                <li style="float:left; padding:5px;"><a class="header_nav-links" href="#"> Blogs</a></li>
+                <li style="float:left; padding:5px;"><a class="header_nav-links" href="#about"> About</a></li>
+            </ul>
+            <!-- NAVIGATION SECTION END -->
+
+            <br>
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
             <h3>Heading 3</h3>
             <h4>Heading 4</h4>
             <h5>Heading 5</h5>
             <h6>Heading 6</h6>
-            <h1>Welcome to my first Web Page! <span style="color:rgb(54, 180, 54)">I am Kevin.</span></h1>
+            <h1>Welcome to my first Web Page! <span style="color:#EBC7E6">I am Kevin.</span></h1>
             <br>
             <p>Let me help you build your visual stories.</p>
         </div>
     </header>
+
     <!-- MAIN SECTION -->
     <main>
         <div class="main">
@@ -31,14 +65,29 @@
             </div>
         </div>
     </main>
+
     <!-- CONTENT SECTION -->
-    <div class="img">
-        <h3>Inserting image</h3>
-        <figure>
-            <img src="bg.jpg" alt="me" width="300px" height="300px" style="border-radius: 50%;">
-            <figcaption>Me</figcaption>
-        </figure>
-    </div>
+    <section>
+        <div class="img">
+            <h3>Inserting image</h3>
+            <figure>
+                <img src="bg.jpg" alt="me" width="300px" height="300px" style="border-radius: 50%;">
+                <figcaption>Me</figcaption>
+            </figure>
+        </div>
+    </section>
+    
+    <!-- ABOUT SECTION -->
+    <section>
+        <div id="about">
+            <h2>ABOUT ME</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. M
+                agni impedit esse facilis rem? Voluptatem doloribus nesciunt, 
+                delectus excepturi voluptatibus porro eius vel tempora reprehenderit, 
+                odit error, ex dignissimos expedita voluptatum!</p>
+        </div>
+    </section>
+    
     <!--
         Copy/Paste code below in Git Bash to update repository
 
