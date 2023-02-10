@@ -1,156 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
-    <style>
-        /* 
-            https://colorhunt.co/palette/645cbba084dcbface2ebc7e6
-            PRIMARY:    #20262E
-            SECONDARY:  #913175
-            ACCENT 1:   #CD5888
-            ACCENT 2:   #E9E8E8
-         
-        
-        .header {
-            height: 50vh
-        }
-        .header_nav-links {
-            text-decoration: none;
-            color: #EBC7E6;
-        }*/
-        
-        .navigation {
-            overflow: hidden;
-            border-bottom: 2px solid #333;
-            background-color: #CD5888;
-        }
-        .navigation a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-            border-bottom: 3px solid transparent;
-        }
-        .logo {
-            float: left;
-            margin: 10px 5px 5px 10px;
-        }
-        .content {
-            text-align: center;
-        }
-        a:hover{
-            color: #20262E;
-        }
-        .content a{
-            color: #f2f2f2;
-            font-size: 17px;
-        }
-    </style>
+    <title>Kodego-Figma-Portfolio-Exercise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body style="background-color: #20262E; color: #E9E8E8; text-align: left;">
-    <!--HEADER SECTION -->
+<body>
     <header>
-        <!-- NAVIGATION -->
-        <div class="navigation" style="height:auto; width:100%; position:fixed;">
-            <div class="logo"><img src="https://raw.githubusercontent.com/tankTopTaro/tankTopTaro.Images/main/bg.jpg" width="60px" height="60px" style="border-radius: 50%;" alt="logo"></div>
-            <ul style="list-style-type: none;">
-                <li style="float: left; padding-left: 5%"><a class="header_nav-links" href="#main">Home</a></li>
-                <li style="float: left; margin-left: 5%"><a class="header_nav-links" href="#content">Content</a></li>
-                <li style="float: left; margin-left: 5%"><a class="header_nav-links" href="#skill">Skills</a></li>
-                <li style="float: left; margin-left: 5%"><a class="header_nav-links" href="#about">About</a></li>
-            </ul>
+        <div class="header">
+            <!-- https://getbootstrap.com/docs/5.3/components/navbar/ -->
+            <nav>
+                <a class="header-brand" href="#">Port<span class="header-brand__span">folio</span></a>
+                <ul id="sidemenu">
+					<li><a href="#header">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+				</ul>
+            </nav>
+            <div class="header-text">
+                <h1>KEVIN BALMORES</h1>
+                <h2>Full Stack Developer | Pentester</h2>
+            </div>
         </div>
+        
     </header>
-    <!-- MAIN SECTION -->
-    <main>
-        <div class="main" style="padding-top: 110px; height:100vh;">
-            <h1>Welcome to my <em>first Web Page!</em> <span style="color:#EBC7E6">I am Kevin.</span></h1>
-            <p>Let me help you build your visual stories.</p>
-            <h1>Heading 1</h1>
-            <h2>Heading 2</h2>
-            <h3>Heading 3</h3>
-            <h4>CODING HEADING 4</h4>
-            <h5>CODING HEADING 5</h5>
-            <h6>CODING HEADING 6</h6>
-        </div>
-        <hr style="border-bottom: 2px solid #333;">
-        <!-- CONTENT SECTION -->
-        <section>
-            <div class="content" style="height:120vh;">
-                <h2>Inserting image</h2>
-                <figure>
-                    <img src="bg.jpg" alt="me" width="300px" height="300px" style="border-radius: 50%;">
-                    <figcaption>Me</figcaption>
-                </figure>
-                <h2>Blog Posts</h2>
-                <a href="#">a</a><br>
-                <a href="#">b</a><br>
-                <a href="#">c</a><br>
-                <a href="#">d</a><br>
-                <a href="#">e</a><br>
-                <a href="#">f</a><br>
-                <a href="#">g</a><br>
-                <a href="#">h</a><br>
-                <a href="#">i</a><br>
-                <a href="#">j</a><br>
-            </div>
-        </section>
-        <!-- SKILL SECTION -->
-        <hr style="border-bottom: 2px solid #333;">
-        <section>
-            <div id="skill" style="height:80vh;">
-                <h4>Skills:</h4>
-                <ol>
-                    <li>Coder</li>
-                    <li>Debugger</li>
-                    <li>Gamer</li>
-                    <li>PenTester</li>
-                </ol>
-            </div>
-        </section>
-        <!-- ABOUT SECTION -->
-        <hr style="border-bottom: 2px solid #333;">
-        <section>
-            <div id="about" style="height:50vh;">
-                <h2>ABOUT ME</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. M
-                    agni impedit esse facilis rem? Voluptatem doloribus nesciunt, 
-                    delectus excepturi voluptatibus porro eius vel tempora reprehenderit, 
-                    odit error, ex dignissimos expedita voluptatum!</p>
-            </div>
-        </section>
-    </main>
-    <!-- FORM SECTION -->
-    <hr style="border-bottom: 2px solid #333;">
     <section>
-        <div class="form" style="height:20vh">
-            <h2>FORM</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="input-name" placeholder="Enter name here">
-                <label for="email">Email:</label>
-                <input type="email" placeholder="Enter email here">
-                <input type="submit" value="Send">
-            </form>
+        <div class="about">
+            <div class="about-text">
+                <h2>ABOUT ME</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nostrum reiciendis aliquid ad dolores, perferendis et repudiandae ut animi debitis obcaecati optio, dignissimos odit temporibus quisquam aliquam incidunt, voluptatum officiis.</p>
+            </div>
+            <div class="about-skills">
+                <h3 class="about-skills__h3--1">Skills</h3>
+                    
+                <h3 class="about-skills__h3--2">Experience</h3>
+                    <ul>
+                        <li>Attending Kodego Full Stack Developer Bootcamp</li>
+                        <li>TBA</li>
+                        <li>TBA</li>
+                    </ul>
+                <h3 class="about-skills__h3--3">Education</h3>
+                    <ul>
+                        <li>Innovative College of Science & Technolgy | BSIT | 2011 - 2017</li>
+                        <li>ACLC College of Calapan | BSIT | 2019 - 2020</li>
+                        <li>AMA Online Education | BSCS | 2020 - 2021</li>
+                    </ul>
+            </div>
         </div>
     </section>
-    <hr style="border-bottom: 2px solid #333;" width="50%">
-    <!-- FOOTER SECTION -->
-    <footer style="text-align: center;">
-        <p>&copy Copyright 2023</p>
-    </footer>
-    <!--
-        Copy/Paste code below in Git Bash to update repository
-
-        git add .
-        git commit -m "--comment here--"
-        git push -u origin main
-    -->
+    <section>
+        <div class="portfolio">
+            <h2>Portfolio</h2>
+        </div>
+    </section>
+    <section>
+        <div class="contact">
+            <h3>Contact</h3>
+            <p>TBA: form</p>
+        </div>
+    </section>
 </body>
 </html>
