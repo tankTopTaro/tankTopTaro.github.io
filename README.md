@@ -1,4 +1,4 @@
-# Mini Project 1
+# Mini Project 1: Multi-page Responsive Website
 
 **Team Count:** Individual
 
