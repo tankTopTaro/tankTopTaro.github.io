@@ -14,4 +14,8 @@
   * Clean Code
   * Consistency
   * Mobile Friendly
+<<<<<<< HEAD
   * Features
+=======
+  * Features
+>>>>>>> b576ba60738dd5eed3c7f0b20b13cafa06765375
