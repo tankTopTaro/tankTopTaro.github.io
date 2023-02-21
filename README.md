@@ -1,1 +1,15 @@
-# tankTopTaro.MiniProject1
+# Mini Project 1
+
+**Team Count:** Individual
+
+## Main Technologies
+  - [x] Bootstrap
+  - [x] Github
+  - [x] Github Pages
+
+## Scoring Criteria: (1 to 10)
+  * Design Creativity
+  * Clean Code
+  * Consistency
+  * Mobile Friendly
+  * Features
