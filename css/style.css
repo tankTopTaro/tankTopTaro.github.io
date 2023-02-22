@@ -12,16 +12,6 @@ body {
 }
 
 /**         NAVIGATION BAR          **/
-/*nav {
-    border-bottom: 2px solid black;
-    display: flex;
-    flex-direction: row;
-    flex-basis: 10%;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-}*/
 
 .navbar {
     border-bottom: 2px solid black;
@@ -51,46 +41,7 @@ nav span {
     margin-bottom: .313rem;
 }
 
-.nav-home {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 14%;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 1.813rem;
-    padding-left: .375rem;
-    padding-right: 1.25rem;
-    height: 60%;
-    background-color: #b4af9a;
-}
-
-.nav-portfolio {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 14%;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 1.813rem;
-    padding-left: .375rem;
-    padding-right: 1.25rem;
-    height: 60%;
-    background-color: #b4af9a;
-}
-
-.nav-writeups {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 14%;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 1.813rem;
-    padding-left: .375rem;
-    padding-right: 1.25rem;
-    height: 60%;
-    background-color: #b4af9a;
-}
-
-.nav-contact {
+.nav-home, .nav-portfolio, .nav-writeups, .nav-contact {
     display: flex;
     flex-direction: row;
     flex-basis: 14%;
@@ -116,3 +67,108 @@ nav span {
 }
 
 /**    END OF NAVIGATION BAR        **/
+/**         ABOUT SECTION           **/
+.about {
+    height: 100vh;
+    width: 100%;
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 2rem 3rem;
+}
+
+.author h1 {
+    font-size: 96px;
+}
+
+.author h2 {
+    margin-left: .375rem;
+    margin-top: 3.8rem;
+    font-size: 24px;
+}
+
+.about-content {
+    margin: 1rem;
+    height: 500px;
+}
+
+.about-title {
+    width: 100%;
+    height: 50px;
+    background-color: #4E4B42;
+}
+
+.about-title span {
+    margin: 1.2rem;
+    color:#C5C0A9;
+    font-size: 30px;
+}
+
+.about-skills, .about-education, .about-me {
+    margin-right: 2rem;
+    padding: 0;
+    font-size: 20px;
+    background-color: #DAD4BB;
+}
+
+.about-skills ul {
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+.about-education .row, .about-me p{
+    margin: 1.5rem;
+}
+
+.cv-container {
+    background-color: #DAD4BB;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+}
+
+.cv-download, .social-links {
+    width: 50%;
+    margin: 1rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.social-links i {
+    margin-left: 1.5rem;
+    font-size: 38px;
+    color: #4c4940;
+}
+
+.download-btn {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 150px;
+    height: 40px;
+    background-color: #4c4940;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-download a {
+    text-decoration: none;
+    color: #C5C0A9;
+}
+
+hr {
+    border-bottom: 1.5px solid black;
+}
+
+/**         END ABOUT SECTION       **/
+
