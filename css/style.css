@@ -64,18 +64,6 @@ nav span {
     background-color: #b4af9a;
 }
 
-.active {
-    align-self: flex-end;
-    height:  80%;
-    background-color: #4c4940;
-}
-
-.active a {
-    color: #D9D3BB;
-    padding-bottom: .625rem;
-    padding-left: .375rem;
-}
-
 .nav-portfolio {
     display: flex;
     flex-direction: row;
@@ -113,6 +101,18 @@ nav span {
     padding-right: 1.25rem;
     height: 60%;
     background-color: #b4af9a;
+}
+
+.active {
+    align-self: flex-end;
+    height:  80%;
+    background-color: #4c4940;
+}
+
+.active a {
+    color: #D9D3BB;
+    padding-bottom: .625rem;
+    padding-left: .375rem;
 }
 
 /**    END OF NAVIGATION BAR        **/
