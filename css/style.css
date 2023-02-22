@@ -127,6 +127,22 @@ nav span {
     margin: 1.5rem;
 }
 
+.profile-img {
+    background-color: #4c4940;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-thumbnail {
+    height: 300px;
+    width: 280px;
+    background-color: #4c4940;
+    border-width: 0;
+}
+
 .cv-container {
     background-color: #DAD4BB;
     display: flex;
@@ -193,8 +209,36 @@ hr {
     font-size: 36px;
 }
 
+.contact-field p {
+    margin:2rem 3rem;
+    font-size: 24px;
+}
+
+.contact-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.name {
+    margin-bottom: .5rem;
+}
+
 #floatingTextarea {
     width: 100%;
     height: 150px;
     resize: none;
+}
+
+.btn {
+    margin: .5rem;
+    background-color: #4c4940;
+    border: 0;
+    color: #C5C0A9;
 }

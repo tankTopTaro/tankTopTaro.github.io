@@ -66,13 +66,16 @@
                 <div class="col about-me">
                     <div class="about-title"><span>About Me</span></div>
                     <p>A computer hobbyist with a passion in learning new things. Currently I study Web Development with the help of Kodego.</p>
+                    <div class="profile-img">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677062074/profile_pyzs83.png" alt="profile_img" class="img-thumbnail">
+                    </div>
                 </div>
             </div>  <!--    END OF about-content    -->
             <div class="row">
                 <div class="col cv-col">
                     <div class="container-fluid cv-container">
                         <div class="cv-download">
-                            <div class="download-btn">
+                            <div class="download-btn btn btn-primary">
                                 <span><a href="#" target="_blank">DOWNLOAD CV</a></span>
                             </div>  <!--    END OF download-btn     -->
                         </div>  <!--    END OF cv-download      -->
@@ -88,23 +91,26 @@
     </section>  <!--    END OF ABOUT SECTION        -->
     <section class="contact" id="contact">
         <div class="container-fluid contact-field">
-            <h2>CONTACT ME</h2>
-            <p>Do you need help with your project? Fill out the form, I might be able to help you.</p>
-
-            <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Name">
-                <label for="floatingInput">Name</label>
+            <div class="contact-text">
+                <h2>CONTACT ME</h2>
+                <p>Do you need help with your project? Fill out the form, I might be able to help you.</p>
             </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-            </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Tell me something about your project." id="floatingTextarea" ></textarea>
-                <label for="floatingTextarea">Tell me something about your project.</label>
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <input class="btn btn-primary" type="submit" value="Submit">
+            <div class="form">
+                <div class="form-floating">
+                    <input type="text" class="form-control name" id="floatingInput" placeholder="Name">
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control email" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control textarea" placeholder="Tell me something about your project." id="floatingTextarea" ></textarea>
+                    <label for="floatingTextarea">Tell me something about your project.</label>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
             </div>
         </div>
     </section>  <!--    END OF CONTACT SECTION      -->
