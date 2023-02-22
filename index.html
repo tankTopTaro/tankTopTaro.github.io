@@ -14,14 +14,15 @@
         <div class="nav-home active"><span><a href="#">HOME</a></span></div>
         <div class="nav-portfolio"><span><a href="./portfolio.html">PORTFOLIO</a></span></div>
         <div class="nav-writeups"><span><a href="./blog.html">WRITE UPS</a></span></div>
-        <div class="nav-contact"><span><a href="#">CONTACT</a></span></div>
+        <div class="nav-contact"><span><a href="#contact" target="_self">CONTACT</a></span></div>
     </nav>
+    <!--        ABOUT SECTION       -->
     <section class="about">
         <div class="container author">
             <h1>KEVIN BALMORES</h1>
             <h2> - WEB DEVELOPER | PENTESTER </h2>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid about-section">
             <div class="row about-content">
                 <div class="col about-skills">
                     <div class="about-title"><span>Skills</span></div>
@@ -66,21 +67,46 @@
                     <div class="about-title"><span>About Me</span></div>
                     <p>A computer hobbyist with a passion in learning new things. Currently I study Web Development with the help of Kodego.</p>
                 </div>
+            </div>  <!--    END OF about-content    -->
+            <div class="row">
+                <div class="col cv-col">
+                    <div class="container-fluid cv-container">
+                        <div class="cv-download">
+                            <div class="download-btn">
+                                <span><a href="#" target="_blank">DOWNLOAD CV</a></span>
+                            </div>  <!--    END OF download-btn     -->
+                        </div>  <!--    END OF cv-download      -->
+                        <div class="social-links">
+                            <a href="https://github.com/tankTopTaro" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
+                            <a href="https://linkedin.com/in/kevin-balmores-6549b9200" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/ttanaka720" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        </div>  <!--    END OF social-links     -->
+                    </div> <!--     END OF cv-container         -->
+                </div>
             </div>
-            <div class="container-fluid cv-container">
-                <div class="cv-download">
-                    <div class="download-btn">
-                        <span><a href="#" target="_blank">DOWNLOAD CV</a></span>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/tankTopTaro" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
-                    <a href="https://linkedin.com/in/kevin-balmores-6549b9200" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com/ttanaka720" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                </div>
+        </div>  <!--    END OF container-fluid      -->
+    </section>  <!--    END OF ABOUT SECTION        -->
+    <section class="contact" id="contact">
+        <div class="container-fluid contact-field">
+            <h2>CONTACT ME</h2>
+            <p>Do you need help with your project? Fill out the form, I might be able to help you.</p>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+                <label for="floatingInput">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Tell me something about your project." id="floatingTextarea" ></textarea>
+                <label for="floatingTextarea">Tell me something about your project.</label>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <input class="btn btn-primary" type="submit" value="Submit">
             </div>
         </div>
-        <hr>
-    </section>
+    </section>  <!--    END OF CONTACT SECTION      -->
 </body>
 </html>

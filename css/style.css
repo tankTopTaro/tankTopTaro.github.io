@@ -90,8 +90,12 @@ nav span {
     font-size: 24px;
 }
 
+.about-section {
+    border-bottom: 1px solid black;
+}
+
 .about-content {
-    margin: 1rem;
+    margin: 1.5rem;
     height: 500px;
 }
 
@@ -129,6 +133,12 @@ nav span {
     align-items: center;
     flex-direction: row;
     height: 60px;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cv-col {
     width: 100%;
 }
 
@@ -172,3 +182,19 @@ hr {
 
 /**         END ABOUT SECTION       **/
 
+/**         CONTACT SECTION         **/
+
+.contact-field {
+    height: 100vh;
+}
+
+.contact-field h2 {
+    margin: 2rem 3rem;
+    font-size: 36px;
+}
+
+#floatingTextarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
