@@ -4,6 +4,18 @@
 
 **Team Count:** Individual
 
+## Background of the Project
+
+## Sitemap
+
+## Wireframe
+
+## Mockup
+
+## Two weeks prior of mini-project
+
+**Figma Design:** [Web Design](https://www.figma.com/file/Ds4WZ64nCw7yZitQk38fzI/Mini-Project-1?node-id=0%3A1&t=lNOFwuRFh6pVrNYN-1) 
+
 ## Main Technologies
   - [x] Bootstrap
   - [x] Github
@@ -14,8 +26,4 @@
   * Clean Code
   * Consistency
   * Mobile Friendly
-<<<<<<< HEAD
-  * Features
-=======
-  * Features
->>>>>>> b576ba60738dd5eed3c7f0b20b13cafa06765375
+
