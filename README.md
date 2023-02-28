@@ -8,13 +8,33 @@
 
 ## Sitemap
 
-## Wireframe
+## Wireframe 
+**Figma Design:** [Web Design](https://www.figma.com/file/Ds4WZ64nCw7yZitQk38fzI/Mini-Project-1?node-id=0%3A1&t=lNOFwuRFh6pVrNYN-1) 
 
-## Mockup
+## Github Page Link
 
 ## Two weeks prior of mini-project
 
-**Figma Design:** [Web Design](https://www.figma.com/file/Ds4WZ64nCw7yZitQk38fzI/Mini-Project-1?node-id=0%3A1&t=lNOFwuRFh6pVrNYN-1) 
+## Current Features Implemented
+1. Responsive Web Design
+2.
+3.
+
+## Possible Bugs
+1.
+2.
+3.
+
+## Testing and Debugging Task Done
+- [] Speed Test
+- [] Semantic Validation
+- [] Responsive Web Test
+
+## Additional Post-Release Features
+1. More Portfolio Contents
+2. More Blog Posts
+3. Update Design and Technologies used
+
 
 ## Main Technologies
   - [x] Bootstrap
