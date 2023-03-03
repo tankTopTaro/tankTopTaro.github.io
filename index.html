@@ -4,187 +4,372 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Project 1</title>
+    <title>Kevin's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/be38a31748.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-----     Navigation Bar      ----->
-    <nav class="navbar navbar-expand-lg" id="home">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="#home" class="nav-link active">HOME</a></li>
-                    <li class="nav-item"><a href="./blog.html" class="nav-link">BLOG</a></li>
-                    <li class="nav-item"><a href="./portfolio.html" class="nav-link">PORTFOLIO</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-                </ul>
-            </div>
+    <nav>
+        <div class="container-fluid nav__div">
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a href="#home" class="nav-link active">HOME</a></li>
+                <li class="nav-item"><a href="./blog.html" class="nav-link">BLOG</a></li>
+                <li class="nav-item"><a href="./portfolio.html" class="nav-link">PORTFOLIO</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
+            </ul>
         </div>
     </nav>
-    <!-----     About Section       ----->
-    <section class="about">
-        <div class="container-fluid about-container">
-            <div class="container author">
-                <h1>Kevin Balmores</h1>
-                <h2> — Front end web developer</h2>
+    <section class="hero">
+        <div class="container-fluid hero__div">
+            <div class="container hero__div--content-1">
+                <h1 class="hero__author">KEVIN <strong>BALMORES</strong></h1>
+                <hr>
+                <p class="hero__paragraph">Front-End Developer</p>
+                <a href="#" class="btn">Download CV</a>
             </div>
-            <div class="row">
-                <div class="col-5 about-education">
-                    <div class="about-title"><span>Education</span></div>
-                    <div class="row school">
-                        <div class="col-4">2011 — 2016</div>
-                        <div class="col-8">
-                            <p>
-                                <strong>BS INFORMATION TECHNOLOGY</strong>,<br>
-                                <em>Innovative College of Science & Technology</em>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row school">
-                        <div class="col-4">2019 — 2020</div>
-                        <div class="col-8">
-                            <p>
-                                <strong>BS INFORMATION TECHNOLOGY</strong>,<br>
-                                <em>ACLC College of Calapan</em>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row school">
-                        <div class="col-4">2020 — 2022</div>
-                        <div class="col-8">
-                            <p>
-                                <strong>BS COMPUTER SCIENCE</strong>,<br>
-                                <em>AMA Online Education</em>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col about-skills">
-                    <div class="about-title"><span>Skills</span></div>
-                    <ul class="skill-list">
-                        <li>HTML & CSS</li>
-                        <li>Python</li>
-                        <li>Basic Penetration Testing</li>
-                        <li>Debugging</li>
-                    </ul>
-                </div>
-                <div class="col about-me">
-                    <div class="about-title"><span>About Me</span></div>
-                    <p class="intro">A computer hobbyist with a passion in learning new things. Currently I study Web Development with the help of Kodego.</p>
-                    <div class="profile-img">
-                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677062074/profile_pyzs83.png" alt="profile image" class="img-thumbnail">
-                    </div>
-                </div>
-            </div>  <!--    END of row  -->
-            <div class="about-links">
-                <div class="about-cv">
-                    <a class="btn " href="https://docs.google.com/document/d/1ukPmGCW08iydgazhmkUm8DjhuV7SBxyi/edit?usp=share_link&ouid=108590208300673790887&rtpof=true&sd=true" download target="_blank">Download CV</a>
-                </div>
-                <div class="about-social">
-                    <a href="https://github.com/tankTopTaro" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
-                    <a href="https://linkedin.com/in/kevin-balmores-6549b9200" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://twitter.com/ttanaka720" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
+            <div class="container hero__div--content-2">
+                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677062074/profile_pyzs83.png" alt="profile_img" class="hero__img">
             </div>
-        </div>  <!--    END about-container-->
+            <div class="container text-uppercase hero__div--content-3">
+                <p>follow me</p>
+                <a href="https://github.com/tankTopTaro" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
+                <a href="https://linkedin.com/in/kevin-balmores-6549b9200" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://twitter.com/ttanaka720" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
     </section>
-    <!--    Portfolio Section       -->
-    <section class="portfolio">
-        <div class="container-fluid portfolio-container">
-            <div class="container portfolio-title">
-                <h2>Projects</h2>
-                <p>Take a look at some of my projects.</p> 
+
+    <section class="about">
+        <h2>ABOUT</h2>
+        <div class="container-fluid about__div">
+            <div class="container about__image">
+                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677753757/My_project_r9fci2.png" alt="me" class="about__img">
             </div>
+            <div class="container __tabs">
+                <div class="flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-bio-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bio" type="button" role="tab" aria-controls="v-pills-bio" aria-selected="true">BIO</button>
+                    <button class="nav-link" id="v-pills-education-tab" data-bs-toggle="pill" data-bs-target="#v-pills-education" type="button" role="tab" aria-controls="v-pills-education" aria-selected="false">EDUCATION</button>
+                    <button class="nav-link" id="v-pills-experience-tab" data-bs-toggle="pill" data-bs-target="#v-pills-experience" type="button" role="tab" aria-controls="v-pills-experience" aria-selected="false">EXPERIENCE</button>
+                </div>
+            </div>
+            <div class="container about__tabs--content">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-bio" role="tabpanel" aria-labelledby="v-pills-bio-tab" tabindex="0">
+                        <p>A computer hobbyist with a passion in learning new things. Currently I study Web Development with the help of Kodego.</p>
+                        <div class="row">
+                            <div class="col bio--details"><pre>Freelance:       <strong>Available</strong></pre></div>
+                            
+                            <div class="col bio--details"><pre>Nationality:     <strong>FILIPINO</strong></pre></div>
+                        </div>
+                        <div class="row">
+                            <div class="col bio--details"><pre>Phone:           <strong>+63-998-4268-980</strong></pre></div>
+                            <div class="col bio--details"><pre>Address:         <strong>Calapan City, Or. Mindoro</strong></pre></div>
+                        </div>
+                        <div class="row">
+                            <div class="col bio--details"><pre>Age:             <strong>29</strong></pre></div>
+                            <div class="col bio--details"><pre>Email:           <strong>balmoresk3v1n@gmail.com</strong></pre></div>
+                        </div>
+                        <a href="#" class="btn">Contact Me</a>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-education" role="tabpanel" aria-labelledby="v-pills-education-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-4">2011 — 2016</div>
+                            <div class="col-8">
+                                <p>
+                                    <strong>BS INFORMATION TECHNOLOGY</strong>,<br>
+                                    <em>Innovative College of Science & Technology</em>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">2019 — 2020</div>
+                            <div class="col-8">
+                                <p>
+                                    <strong>BS INFORMATION TECHNOLOGY</strong>,<br>
+                                    <em>ACLC College of Calapan</em>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">2020 — 2022</div>
+                            <div class="col-8">
+                                <p>
+                                    <strong>BS COMPUTER SCIENCE</strong>,<br>
+                                    <em>AMA Online Education</em>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-experience" role="tabpanel" aria-labelledby="v-pills-experience-tab" tabindex="0">
+                        <p><strong>Attending Kodego Bootcamp 2023</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skill">
+        <h2>SKILL</h2>
+        <div class="container-fluid skill__div">
+            <div class="container __tabs">
+                <div class="flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-ui-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ui" type="button" role="tab" aria-controls="v-pills-ui" aria-selected="true">UI/UX</button>
+                    <button class="nav-link" id="v-pills-language-tab" data-bs-toggle="pill" data-bs-target="#v-pills-language" type="button" role="tab" aria-controls="v-pills-language" aria-selected="false">LANGUAGE</button>
+                    <button class="nav-link" id="v-pills-other-tab" data-bs-toggle="pill" data-bs-target="#v-pills-other" type="button" role="tab" aria-controls="v-pills-other" aria-selected="false">OTHER</button>
+                </div>
+            </div>
+            <div class="container __contents">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-ui" role="tabpanel" aria-labelledby="v-pills-ui-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-3">Prototyping</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Prototyping" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Wireframing</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Wireframing" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Figma</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Figma" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Adobe Photoshop</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Photoshop" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-language" role="tabpanel" aria-labelledby="v-pills-language-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-3">Python</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Python" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 60%">60%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Javascript</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Javascript" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 2%">2%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">C++</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="C++" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">C#</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="C#" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Java</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Java" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-other" role="tabpanel" aria-labelledby="v-pills-other-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-3">HTML/CSS</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="HTML/CSS" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 80%">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Touch Typing</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="TouchTyping" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Penetration Testing</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="PenTest" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 15%">15%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio">
+        <h2>PORTFOLIO</h2>
+        <div class="container-fluid portfolio__div">
             <div class="card-group">
-                <div class="card col-card">
+                <div class="card">
                     <div class="card-body">
                         <div class="project-title">
                             <h5 class="card-title">Tea Shop Menu</h5>
                         </div>
                         <p class="card-text">A basic HTML and CSS website.</p>
                     </div>
-                    <img src="./images/tea-house.jpg" class="card-img-bottom" alt="tea house">
+                    <img src="./images/tea-house.jpg" class="card-img-bottom" alt="tea-house">
                     <div class="card-body card-body--2">
-                        <a href="https://tanktoptaro.github.io/teashop-landing-page/" class="btn btn-primary">Visit site</a>
+                        <a href="https://tanktoptaro.github.io/teashop-landing-page/" class="btn">Visit site</a>
                     </div>
                 </div>
-                <div class="card col-card">
+                <div class="card">
                     <div class="card-body">
                         <div class="project-title">
                             <h5 class="card-title">Dog Photo Blog</h5>
                         </div>
                         <p class="card-text">This site implements Bootstrap.</p>
                     </div>
-                    <img src="./images/dog-photo-blog.jpg" class="card-img-bottom" alt="tea house">
+                    <img src="./images/dog-photo-blog.jpg" class="card-img-bottom" alt="dog-photo-blog">
                     <div class="card-body card-body--2">
-                        <a href="https://tanktoptaro.github.io/dog-photo-blog/" class="btn btn-primary">Visit site</a>
+                        <a href="https://tanktoptaro.github.io/dog-photo-blog/" class="btn">Visit site</a>
                     </div>
                 </div>
-                <div class="card col-card">
+                <div class="card">
                     <div class="card-body">
                         <div class="project-title">
                             <h5 class="card-title">Portfolio Site</h5>
                         </div>
                         <p class="card-text">A website with a responsive design.</p>
                     </div>
-                    <img src="./images/portfolio-site.jpg" class="card-img-bottom" alt="tea house">
+                    <img src="./images/portfolio-site.jpg" class="card-img-bottom" alt="portfolio-site">
                     <div class="card-body card-body--2">
-                        <a href="https://tanktoptaro.github.io/portfolio-site/" target="_blank" class="btn btn-primary">Visit site</a>
+                        <a href="https://tanktoptaro.github.io/portfolio-site/" target="_blank" class="btn">Visit site</a>
                     </div>
                 </div>
             </div>
             <div class="container-fluid container--2">
-                <a href="./portfolio.html" class="btn btn-primary">See more</a>
+                <a href="./portfolio.html" class="btn">See more</a>
             </div>
         </div>
     </section>
-    <!--        Contact Section     -->
-    <section class="contact">
-        <div class="container-fluid contact-container">
-            <div class="container contact-title">
-                <h2>Contact Me</h2>
-                <p>Do you need help on your projects? Tell me something about it and I might be able to help.</p>
-            </div>
-            <div class="row">
-                <div class="col-4 contact-left">
-                    <p class="contact-icon"><i class="fa-solid fa-phone"></i> +63 998 426 8980</p>
-                    <p class="contact-icon"><i class="fa-solid fa-envelope"></i> balmoresk3v1n@gmail.com</p>
-                    <p class="contact-icon">
-                        <i class="fa-solid fa-location-pin"></i>    
-                        31-36 Carnation St, Neo Calapan Subd, Brgy. Bulusan, Calapan City, Or. Mindoro, Philippines, 5200
-                    </p>
+    <section class="blog">
+        <h2>BLOG</h2>
+        <div class="container-fluid portfolio__div">
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="project-title">
+                            <h5 class="card-title">OWASP Juice Shop | TryHackMe</h5>
+                        </div>
+                        <p class="card-text">This room uses the Juice Shop vulnerable web application to learn how to identify and exploit common web application vulnerabilities.</p>
+                    </div>
+                    <img src="./images/juiceshop-banner.png" class="card-img-bottom" alt="thm-juice">
+                    <div class="card-body card-body--2">
+                        <a href="#" class="btn">Read More</a>
+                    </div>
                 </div>
-                <div class="col-7 contact-right">
-                    <div class="form">
-                        <div class="form-floating">
-                            <input type="text" class="form-control name" id="floatingInput" placeholder="Name">
-                            <label for="floatingInput">Name</label>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="project-title">
+                            <h5 class="card-title">Web Enumeration | TryHackMe</h5>
                         </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control email" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
+                        <p class="card-text">Learn the methodology of enumerating websites by using tools such as Gobuster, Nikto and WPScan.</p>
+                    </div>
+                    <img src="./images/webenumeration-banner.png" class="card-img-bottom" alt="dog-photo-blog">
+                    <div class="card-body card-body--2">
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="project-title">
+                            <h5 class="card-title">Upload Vulnerabilities | TryHackMe</h5>
                         </div>
-                        <div class="form-floating">
-                            <textarea class="form-control textarea" placeholder="Tell me something about your project." id="floatingTextarea"></textarea>
-                            <label for="floatingTextarea">Tell me something about your project.</label>
-                        </div>
-                        <div class="d-grid gap-2 col-6 mx-auto">
-                            <input class="btn btn-primary" type="submit" value="Submit">
-                        </div>
+                        <p class="card-text">Tutorial room exploring some basic file-upload vulnerabilities in websites.<br>&nbsp;</p>
+                    </div>
+                    <img src="./images/upload-banner.png" class="card-img-bottom" alt="portfolio-site">
+                    <div class="card-body card-body--2">
+                        <a href="#" target="_blank" class="btn">Read More</a>
                     </div>
                 </div>
             </div>
+            <div class="container-fluid container--2">
+                <a href="./blog.html" class="btn">See more</a>
+            </div>
         </div>
     </section>
-    <!--        Footer Section      -->
-    <footer>
-        <p>&copy; Copyright 2023, Kevin Balmores</p>
-        <!--    ADD A SITEMAP HERE      -->
+    <section class="contact">
+        <h2>CONTACT</h2>
+        <div class="container-fluid contact__div">
+            <div class="container contact__form">
+                <div class="form-floating">
+                    <input type="text" class="form-control name" id="floatingInput" placeholder="Your Name" required>
+                    <label for="floatingInput">Your Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control email" id="floatingInput" placeholder="E-mail Address" required>
+                    <label for="floatingInput">E-mail Address</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control textarea" placeholder="Message" id="floatingTextarea" required></textarea>
+                    <label for="floatingTextarea">Message</label>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <input class="btn" type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center text-lg-start text-muted">
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6>Kevin</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                            Sunt facere cupiditate perspiciatis voluptatum aliquid nesciunt optio <br>
+                            suscipit libero repellat necessitatibus perferendis, id odio fugit maxime inventore amet cum hic ea.</p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6>Quick Links</h6>
+                        <p><a href="#">HOME</a></p>
+                        <p><a href="#">ABOUT ME</a></p>
+                        <p><a href="#">PORTFOLIO</a></p>
+                        <p><a href="#">BLOG</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6>Contact</h6>
+                        <p><i class="fa-solid fa-house"></i>&emsp;31-36 Carnation St., Neo Calapan Subd., Brgy. Bulusan, Calapan City, Or. Mindoro, 5200</p>
+                        <p><i class="fa-solid fa-phone"></i>&emsp;+63-998-4268-980</p>
+                        <p><i class="fa-solid fa-envelope"></i>&emsp;balmoresk3v1n@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4">
+            <p>&copy; 2023, Kevin Balmores</p>
+        </div>
     </footer>
-    <!--    Bootstrap JS    -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

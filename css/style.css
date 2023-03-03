@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
+
+:root {
+    --main-bg-color: #C8C3AB;
+    --title-bg-color: #4E4B42;
+    --title-text-color: #C5C0A9;
+    --nav-active-color: #4C4940;
+    --active-text-color: #D9D3BB;
+    --nav-link-bg-color: #B4AF9A;
+    --content-bg-color: #DAD4BB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+h2 {
+    font-size: 64px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.btn {
+    background-color: var(--nav-active-color);
+    color: var(--active-text-color);
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 35px;
+    border-radius: 6px;
+    margin: 10px auto;
+    transition: transform .4s;
+}
+
+.btn:hover {
+    background-color: var(--nav-active-color);
+    color: var(--active-text-color);
+    transform: scale(1.1);
+}
+
+/********* NAVIGATION *********/
+
+.nav {
+    border-bottom: 1.5px solid black;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__div { padding: 0; }
+
+.nav .nav-item .nav-link {
+    width: 200px;
+    background-color: var(--nav-link-bg-color);
+    color: var(--title-bg-color);
+    margin-left: 10px;
+    margin-top:5px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.nav .nav-item .active {
+    background-color: var(--nav-active-color);
+    color: var(--active-text-color);
+    padding-bottom: 1.5rem;
+}
+
+/********* HERO SECTION *********/
+
+.hero {
+    height: 100vh;
+}
+
+.hero p {
+    color: var(--nav-active-color);
+}
+
+.hero__div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.hero__div--content-1 {
+    width: 50%;
+}
+
+.hero__author {
+    margin-top: 3em;
+    font-size: 72px;
+}
+
+.hero hr {
+    width: 150px;
+    border: 2.5px solid black;
+    border-radius: 6px;
+}
+
+.hero__paragraph {
+    font-size: 32px;
+}
+
+.hero__div--content-2 {
+    width: 45%;
+    background-color: var(--title-bg-color);
+    text-align: center;
+    margin: 20px;
+}
+
+.hero__img {
+    width: 636px;
+}
+
+.hero__div--content-3 {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.hero__div--content-3 p {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+
+.hero__div--content-3 a {
+    color: var(--title-bg-color);
+    text-align: right;
+    font-size: 24px;
+}
+
+.vl {
+    border-left: 6px solid black;
+    height: 200px;
+    position:absolute;
+}
+
+/********* ABOUT SECTION *********/
+.about {
+    height: 100vh;
+}
+
+.about__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2em;
+}
+
+.about__image {
+    text-align: right;
+    background-color: var(--title-bg-color);
+    padding: 0;
+    width: 30%;
+}
+
+.about__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.__tabs {
+    width: 20%;
+    font-size: 24px;
+    background-color: var(--content-bg-color);
+    padding: 0;
+}
+
+.__tabs .nav-link {
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+    border-radius: 0;
+}
+
+.__tabs .nav-link.active {
+    background-color: var(--nav-active-color);
+    color: var(--active-text-color);
+    border-radius: 0;
+}
+
+.about__tabs--content {
+    width: 80%;
+    font-size: 20px;
+    background-color: var(--content-bg-color);
+    padding: 20px;
+}
+
+.about__tabs--content p {
+    color: var(--nav-active-color);
+}
+
+.bio--details {
+    color: var(--nav-active-color);
+}
+
+#v-pills-bio .btn{
+    background-color: var(--nav-active-color);
+    color: var(--active-text-color);
+}
+
+/********* SKILL SECTION *********/
+.skill {
+    height: 100vh;
+}
+
+.skill h2 {
+    font-size: 86px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.skill__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2em;
+}
+
+.skill__div .__tabs {
+    height: 500px;
+    width: 30%;
+}
+
+.__contents {
+    font-size: 24px;
+    width: 70%;
+    background-color: var(--content-bg-color);
+}
+
+.__contents .row {
+    margin-top: 20px;
+}
+
+/********* PORTFOLIO SECTION *********/
+.portfolio {
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--content-bg-color);
+    margin: 10px;
+}
+
+.card-body {
+    margin: 0;
+    padding: 0;
+}
+
+.project-title {
+    background-color: var(--title-bg-color);
+    color: var(--title-text-color);
+    padding: .25rem;
+}
+
+.card-title {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.card-text {
+    color: var(--nav-active-color);
+    font-size: 18px;
+    margin: 10px;
+}
+
+.card img {
+    margin-top: 10px;
+}
+
+.card-body--2 {
+    margin-left: 20px
+}
+
+/********* BLOG SECTION *********/
+.blog {
+    height: 100vh;
+}
+
+/********* CONTACT SECTION *********/
+.contact {
+    height: 100vh;
+    margin-bottom: 100px;
+}
+
+.contact__form {
+    margin:20px auto;
+    padding: 20px;
+}
+
+.form-floating {
+    margin-top:20px;
+}
+
+.name, .email, .name:focus, .email:focus {
+    background-color: var(--content-bg-color);
+    border: 0;
+}
+
+.form-floating .textarea {
+    height: 400px;
+    resize: none;
+    border: 0;
+    background-color: var(--content-bg-color);
+}
+
+.contact__div--2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.contact__div--2-author {
+    width: 30%;
+}
+
+/********* FOOTER *********/
+footer {
+    width: 100%;
+    background-color: var(--title-bg-color);
+    padding-top: 20px;
+}
+
+footer a, h6, p {
+    text-decoration: none;
+    color: var(--title-text-color);
+}
+
+footer p {
+    word-wrap: break-word;
+}
+
+footer h6 {
+    font-size: 24px;
+}
+
+/********* MEDIA QUERIES *********/
+@media only screen and (max-width:1200px){
+    .nav .nav-item .nav-link {
+        width: 150px;
+    }
+
+    .hero__author {
+        font-size: 58px;
+    }
+
+    .hero__img {
+        width: 400px;
+    }
+} 
