@@ -10,16 +10,27 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="container-fluid nav__div">
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="#home" class="nav-link active">HOME</a></li>
-                <li class="nav-item"><a href="./blog.html" class="nav-link">BLOG</a></li>
-                <li class="nav-item"><a href="./portfolio.html" class="nav-link">PORTFOLIO</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler btn ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link active" href="#home">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./blog.html">BLOG</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./portfolio.html">PORTFOLIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </nav>
+
     <section class="hero">
         <div class="container-fluid hero__div">
             <div class="container hero__div--content-1">
@@ -27,9 +38,15 @@
                 <hr>
                 <p class="hero__paragraph">Front-End Developer</p>
                 <a href="#" class="btn">Download CV</a>
+                <div class="container text-uppercase hero__div--content-4">
+                    <p>follow me</p>
+                    <a href="https://github.com/tankTopTaro" target="_blank"><i class="fa-brands fa-github-alt"></i></a>
+                    <a href="https://linkedin.com/in/kevin-balmores-6549b9200" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://twitter.com/ttanaka720" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
             <div class="container hero__div--content-2">
-                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677062074/profile_pyzs83.png" alt="profile_img" class="hero__img">
+                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677062074/profile_pyzs83.png" alt="profile_img" class="hero__img" loading="lazy">
             </div>
             <div class="container text-uppercase hero__div--content-3">
                 <p>follow me</p>
@@ -43,8 +60,66 @@
     <section class="about">
         <h2>ABOUT</h2>
         <div class="container-fluid about__div">
+            <div class="container about__div--mobile">
+                <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-bio-tab" data-bs-toggle="pill" data-bs-target="#pills-bio" type="button" role="tab" aria-controls="pills-bio" aria-selected="true">BIO</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill" data-bs-target="#pills-education" type="button" role="tab" aria-controls="pills-education" aria-selected="false">EDUCATION</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience" aria-selected="false">EXPERIENCE</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-bio" role="tabpanel" aria-labelledby="pills-bio-tab" tabindex="0">
+                        <p>A computer hobbyist with a passion in learning new things. Currently I study Web Development with the help of Kodego.</p>
+                        <p>Age: &emsp;<strong>29</strong></p>
+                        <p>Nationality: &emsp;<strong>FILIPINO</strong></p>
+                        <p>Freelance: &emsp;<strong>Available</strong></p>
+                        <p>Address: &emsp;<strong>Calapan City, Or. Mindoro</strong></p>
+                        <p>Phone: &emsp;<strong>+63-998-4268-980</strong></p>
+                        <p>Email: &emsp;<strong>balmoresk3v1n@gmail.com</strong></p>
+                        <a href="#" class="btn">Contact Me</a>
+                    </div>
+                    <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-4"><p>2011 — 2016</p></div>
+                            <div class="col-8">
+                                <p>
+                                    <strong>BS INFORMATION TECHNOLOGY</strong>,<br>
+                                    <em>Innovative College of Science & Technology</em>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4"><p>2019 — 2020</p></div>
+                            <div class="col-8">
+                                <p>
+                                    <strong>BS INFORMATION TECHNOLOGY</strong>,<br>
+                                    <em>ACLC College of Calapan</em>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4"><p>2020 — 2022</p></div>
+                            <div class="col-8">
+                                <p>
+                                    <strong>BS COMPUTER SCIENCE</strong>,<br>
+                                    <em>AMA Online Education</em>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-experience" role="tabpanel" aria-labelledby="pills-experience-tab" tabindex="0">
+                        <p><strong>Attending Kodego Bootcamp 2023</strong></p>
+                    </div>
+                </div>
+            </div>
+
             <div class="container about__image">
-                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677753757/My_project_r9fci2.png" alt="me" class="about__img">
+                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677753757/My_project_r9fci2.png" alt="me" class="about__img" loading="lazy">
             </div>
             <div class="container __tabs">
                 <div class="flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -111,6 +186,123 @@
     <section class="skill">
         <h2>SKILL</h2>
         <div class="container-fluid skill__div">
+            <div class="container skill__div--mobile">
+                <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-ui-tab" data-bs-toggle="pill" data-bs-target="#pills-ui" type="button" role="tab" aria-controls="pills-ui" aria-selected="true">UI/UX</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-language-tab" data-bs-toggle="pill" data-bs-target="#pills-language" type="button" role="tab" aria-controls="pills-language" aria-selected="false">LANGUAGE</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-other-tab" data-bs-toggle="pill" data-bs-target="#pills-other" type="button" role="tab" aria-controls="pills-other" aria-selected="false">OTHER</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-ui" role="tabpanel" aria-labelledby="pills-ui-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-3">Prototyping</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Prototyping" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Wireframing</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Wireframing" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Figma</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Figma" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Adobe Photoshop</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Photoshop" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 25%">25%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-language" role="tabpanel" aria-labelledby="pills-language-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-3">Python</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Python" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 60%">60%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Javascript</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Javascript" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 2%">2%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">C++</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="C++" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">C#</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="C#" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Java</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="Java" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-other-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-3">HTML/CSS</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="HTML/CSS" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 80%">80%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Touch Typing</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="TouchTyping" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 50%">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Penetration Testing</div>
+                            <div class="col-8">
+                                <div class="progress" role="progressbar" aria-label="PenTest" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                    <div class="progress-bar" style="width: 15%">15%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="container __tabs">
                 <div class="flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <button class="nav-link active" id="v-pills-ui-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ui" type="button" role="tab" aria-controls="v-pills-ui" aria-selected="true">UI/UX</button>
@@ -229,6 +421,67 @@
     <section class="portfolio">
         <h2>PORTFOLIO</h2>
         <div class="container-fluid portfolio__div">
+            <div class="container portfolio__div--mobile">
+                <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="project-title">
+                                    <h5 class="card-title">Dog Photo Blog</h5>
+                                </div>
+                                <p class="card-text">This site implements Bootstrap.</p>
+                            </div>
+                            <img src="./images/dog-photo-blog.jpg" class="card-img-bottom" alt="dog-photo-blog">
+                            <div class="card-body card-body--2">
+                                <a href="https://tanktoptaro.github.io/dog-photo-blog/" class="btn">Visit site</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item active">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="project-title">
+                                    <h5 class="card-title">Tea Shop Menu</h5>
+                                </div>
+                                <p class="card-text">A basic HTML and CSS website.</p>
+                            </div>
+                            <img src="./images/tea-house.jpg" class="card-img-bottom" alt="tea-house">
+                            <div class="card-body card-body--2">
+                                <a href="https://tanktoptaro.github.io/teashop-landing-page/" class="btn">Visit site</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="project-title">
+                                    <h5 class="card-title">Portfolio Site</h5>
+                                </div>
+                                <p class="card-text">A website with a responsive design.</p>
+                            </div>
+                            <img src="./images/portfolio-site.jpg" class="card-img-bottom" alt="portfolio-site">
+                            <div class="card-body card-body--2">
+                                <a href="https://tanktoptaro.github.io/portfolio-site/" target="_blank" class="btn">Visit site</a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
@@ -274,15 +527,15 @@
     </section>
     <section class="blog">
         <h2>BLOG</h2>
-        <div class="container-fluid portfolio__div">
-            <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="container-fluid blog__div">
+            <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                  <div class="carousel-item" data-bs-interval="5000">
+                  <div class="carousel-item active">
                     <div class="card">
                         <div class="card-body">
                             <div class="project-title">
@@ -296,7 +549,7 @@
                         </div>
                     </div>
                   </div>
-                  <div class="carousel-item active" data-bs-interval="5000">
+                  <div class="carousel-item">
                     <div class="card">
                         <div class="card-body">
                             <div class="project-title">
@@ -310,7 +563,7 @@
                         </div>
                     </div>
                   </div>
-                  <div class="carousel-item" data-bs-interval="5000">
+                  <div class="carousel-item">
                     <div class="card">
                         <div class="card-body">
                             <div class="project-title">
@@ -325,11 +578,11 @@
                     </div>
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
