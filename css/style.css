@@ -356,7 +356,7 @@ footer h6 {
     }
 
     .hero, .about, .portfolio, .blog, .contact {
-        height: 110vh;
+        height: 150vh;
     }
 
     .hero {
