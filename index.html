@@ -58,17 +58,17 @@
                     <div class="tab-pane fade show active" id="v-pills-bio" role="tabpanel" aria-labelledby="v-pills-bio-tab" tabindex="0">
                         <p>A computer hobbyist with a passion in learning new things. Currently I study Web Development with the help of Kodego.</p>
                         <div class="row">
-                            <div class="col bio--details"><pre>Freelance:       <strong>Available</strong></pre></div>
                             
-                            <div class="col bio--details"><pre>Nationality:     <strong>FILIPINO</strong></pre></div>
+                            <div class="col bio--details"><p>Age:&emsp;<strong>29</strong></p></div>
+                            <div class="col bio--details"><p>Nationality:&emsp;<strong>FILIPINO</strong></p></div>
                         </div>
                         <div class="row">
-                            <div class="col bio--details"><pre>Phone:           <strong>+63-998-4268-980</strong></pre></div>
-                            <div class="col bio--details"><pre>Address:         <strong>Calapan City, Or. Mindoro</strong></pre></div>
+                            <div class="col bio--details"><p>Freelance:&emsp;<strong>Available</strong></p></div>
+                            <div class="col bio--details"><p>Address:&emsp;<strong>Calapan City, Or. Mindoro</strong></p></div>
                         </div>
                         <div class="row">
-                            <div class="col bio--details"><pre>Age:             <strong>29</strong></pre></div>
-                            <div class="col bio--details"><pre>Email:           <strong>balmoresk3v1n@gmail.com</strong></pre></div>
+                            <div class="col bio--details"><p>Phone:&emsp;<strong>+63-998-4268-980</strong></p></div>
+                            <div class="col bio--details"><p>Email:&emsp;<strong>balmoresk3v1n@gmail.com</strong></p></div>
                         </div>
                         <a href="#" class="btn">Contact Me</a>
                     </div>
@@ -275,44 +275,65 @@
     <section class="blog">
         <h2>BLOG</h2>
         <div class="container-fluid portfolio__div">
-            <div class="card-group">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="project-title">
-                            <h5 class="card-title">OWASP Juice Shop | TryHackMe</h5>
-                        </div>
-                        <p class="card-text">This room uses the Juice Shop vulnerable web application to learn how to identify and exploit common web application vulnerabilities.</p>
-                    </div>
-                    <img src="./images/juiceshop-banner.png" class="card-img-bottom" alt="thm-juice">
-                    <div class="card-body card-body--2">
-                        <a href="#" class="btn">Read More</a>
-                    </div>
+            <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="project-title">
-                            <h5 class="card-title">Web Enumeration | TryHackMe</h5>
+                <div class="carousel-inner">
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="project-title">
+                                <h5 class="card-title">OWASP Juice Shop | TryHackMe</h5>
+                            </div>
+                            <p class="card-text">This room uses the Juice Shop vulnerable web application to learn how to identify and exploit common web application vulnerabilities.</p>
                         </div>
-                        <p class="card-text">Learn the methodology of enumerating websites by using tools such as Gobuster, Nikto and WPScan.</p>
-                    </div>
-                    <img src="./images/webenumeration-banner.png" class="card-img-bottom" alt="dog-photo-blog">
-                    <div class="card-body card-body--2">
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="project-title">
-                            <h5 class="card-title">Upload Vulnerabilities | TryHackMe</h5>
+                        <img src="./images/juiceshop-banner.png" class="card-img-bottom" alt="thm-juice">
+                        <div class="card-body card-body--2">
+                            <a href="#" class="btn">Read More</a>
                         </div>
-                        <p class="card-text">Tutorial room exploring some basic file-upload vulnerabilities in websites.<br>&nbsp;</p>
                     </div>
-                    <img src="./images/upload-banner.png" class="card-img-bottom" alt="portfolio-site">
-                    <div class="card-body card-body--2">
-                        <a href="#" target="_blank" class="btn">Read More</a>
+                  </div>
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="project-title">
+                                <h5 class="card-title">Web Enumeration | TryHackMe</h5>
+                            </div>
+                            <p class="card-text">Learn the methodology of enumerating websites by using tools such as Gobuster, Nikto and WPScan.</p>
+                        </div>
+                        <img src="./images/webenumeration-banner.png" class="card-img-bottom" alt="dog-photo-blog">
+                        <div class="card-body card-body--2">
+                            <a href="#" class="btn">Read More</a>
+                        </div>
                     </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="project-title">
+                                <h5 class="card-title">Upload Vulnerabilities | TryHackMe</h5>
+                            </div>
+                            <p class="card-text">Tutorial room exploring some basic file-upload vulnerabilities in websites.</p>
+                        </div>
+                        <img src="./images/upload-banner.png" class="card-img-bottom" alt="portfolio-site">
+                        <div class="card-body card-body--2">
+                            <a href="#" target="_blank" class="btn">Read More</a>
+                        </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             <div class="container-fluid container--2">
                 <a href="./blog.html" class="btn">See more</a>
             </div>

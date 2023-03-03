@@ -44,6 +44,10 @@ h2 {
     transform: scale(1.1);
 }
 
+.hero, .about, .skill, .portfolio, .blog, .contact {
+    height: 100vh;
+}
+
 /********* NAVIGATION *********/
 
 .nav {
@@ -71,11 +75,6 @@ h2 {
 }
 
 /********* HERO SECTION *********/
-
-.hero {
-    height: 100vh;
-}
-
 .hero p {
     color: var(--nav-active-color);
 }
@@ -137,17 +136,7 @@ h2 {
     font-size: 24px;
 }
 
-.vl {
-    border-left: 6px solid black;
-    height: 200px;
-    position:absolute;
-}
-
 /********* ABOUT SECTION *********/
-.about {
-    height: 100vh;
-}
-
 .about__div {
     display: flex;
     flex-direction: row;
@@ -209,10 +198,6 @@ h2 {
 }
 
 /********* SKILL SECTION *********/
-.skill {
-    height: 100vh;
-}
-
 .skill h2 {
     font-size: 86px;
     margin-top: 50px;
@@ -243,13 +228,10 @@ h2 {
 }
 
 /********* PORTFOLIO SECTION *********/
-.portfolio {
-    height: 100vh;
-}
-
 .card {
     background-color: var(--content-bg-color);
     margin: 10px;
+    border-radius: 0;
 }
 
 .card-body {
@@ -283,16 +265,12 @@ h2 {
 }
 
 /********* BLOG SECTION *********/
-.blog {
-    height: 100vh;
+.carousel .card {
+    height: 500px;
 }
+
 
 /********* CONTACT SECTION *********/
-.contact {
-    height: 100vh;
-    margin-bottom: 100px;
-}
-
 .contact__form {
     margin:20px auto;
     padding: 20px;
@@ -312,18 +290,6 @@ h2 {
     resize: none;
     border: 0;
     background-color: var(--content-bg-color);
-}
-
-.contact__div--2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-
-.contact__div--2-author {
-    width: 30%;
 }
 
 /********* FOOTER *********/
@@ -352,11 +318,53 @@ footer h6 {
         width: 150px;
     }
 
+
+    /********* HERO SECTION *********/
+    .hero, .about, .skill, .portfolio, .blog, .contact {
+        height: 120vh;
+    }
+
     .hero__author {
-        font-size: 58px;
+        font-size: 54px;
+    }
+
+    .hero_paragraph {
+        font-size: 27px;
     }
 
     .hero__img {
-        width: 400px;
+        width: 350px;
+    }
+
+    /********* ABOUT SECTION *********/
+
+    .about__tabs--content {
+        font-size: 16px;
+    }
+
+    /********* SKILL SECTION *********/
+
+    .skill__div .__tabs {
+        height: 300px;
+    }
+    
+    /********* BLOG SECTION *********/
+    .card-text {
+        font-size: 16px;
+    }
+
+    /********* BLOG SECTION *********/
+
+    .contact__form {
+        margin:10px auto;
+        padding: 10px;
+    }
+    
+    .form-floating {
+        margin-top:10px;
+    }
+    
+    .form-floating .textarea {
+        height: 150px;
     }
 } 
