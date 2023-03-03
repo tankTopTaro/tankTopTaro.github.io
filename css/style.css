@@ -356,7 +356,7 @@ footer h6 {
     }
 
     .hero, .about, .portfolio, .blog, .contact {
-        height: 200vh;
+        height: 150vh;
     }
 
     .hero {
@@ -419,7 +419,7 @@ footer h6 {
 
     .about__div--mobile .nav .nav-link {
         color: var(--title-bg-color);
-        font-size: 24px;
+        font-size: 16px;
         border-radius: 0;
     }
 
@@ -467,7 +467,7 @@ footer h6 {
 
     .skill__div--mobile .nav .nav-link {
         color: var(--title-bg-color);
-        font-size: 24px;
+        font-size: 16px;
         border-radius: 0;
     }
 
