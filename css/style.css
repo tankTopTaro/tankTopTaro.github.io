@@ -319,7 +319,7 @@ h2 {
 }
 
 .form-floating .textarea {
-    height: 400px;
+    height: 250px;
     resize: none;
     border: 0;
     background-color: var(--content-bg-color);
