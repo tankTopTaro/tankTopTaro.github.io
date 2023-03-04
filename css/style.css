@@ -415,6 +415,7 @@ footer h6 {
 
     .about__div--mobile {
         display: block;
+        width: 100%;
     }
 
     .about__div--mobile .nav .nav-link {
