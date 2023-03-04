@@ -17,18 +17,18 @@
 
 ## Current Features Implemented
 1. Responsive Web Design
-2.
+2. 
 3.
 
 ## Possible Bugs
-1.
+1. Unresponsive design with mid-size screen (between 800px to 1400px)
 2.
 3.
 
 ## Testing and Debugging Task Done
-- [] Speed Test
-- [] Semantic Validation
-- [] Responsive Web Test
+- [x] Speed Test
+- [x] Semantic Validation
+- [x] Responsive Web Test
 
 ## Additional Post-Release Features
 1. More Portfolio Contents
