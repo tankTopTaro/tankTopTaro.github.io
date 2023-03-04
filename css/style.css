@@ -346,7 +346,7 @@ footer h6 {
 }
 
 /********* MEDIA QUERIES *********/
-@media screen and (min-width: 360px) and (max-width: 720px) {
+@media screen and (min-width: 320px) and (max-width: 720px) {
     .offcanvas .nav-item .nav-link {
         width: 100%;
     }
