@@ -382,7 +382,7 @@ footer h6 {
 
     .hero__author {
         margin-top: 8em;
-        font-size: 48px;
+        font-size: 36px;
     }
 
     .hero__div--content-4 {
@@ -397,7 +397,7 @@ footer h6 {
     .hero__div--content-4 a, .hero__div--content-4 p {
         color: var(--title-bg-color);
         text-align: right;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .about {
