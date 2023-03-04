@@ -435,7 +435,7 @@ footer h6 {
 
     .about__div--mobile p {
         color: black;
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .__tabs, .__contents, .about__image, .about__tabs--content {
@@ -501,6 +501,10 @@ footer h6 {
     
     .portfolio__div--mobile .card-body--2, .blog .card-body--2 {
         margin-left: 10px
+    }
+
+    @media screen and (min-width: 721px) and (max-width: 1000px) {
+
     }
 }
 
