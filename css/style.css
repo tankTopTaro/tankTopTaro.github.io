@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
 
 :root {
-    --main-bg-color: #C8C3AB;
+    --color-1: #BDB8A2;
+    --color-2: #645F54;
+    --color-3: #54473F;
+    --primary-color: #91A297;
+    --secondary-color: #2C2F48;
+    --accent-color-1: #454957;
+    --accent-color-2: #576648;
+
+    --main-bg-color: #9a9681;
     --title-bg-color: #4e4b42;
     --title-text-color: #C5C0A9;
     --nav-active-color: #4C4940;
@@ -18,497 +26,227 @@
 
 body {
     font-family: 'Rajdhani', sans-serif;
-    background-color: var(--main-bg-color);
 }
 
-h2 {
-    font-size: 64px;
-    margin-top: 50px;
-    margin-left: 10px;
+/** ---------------     <GLOBAL>        --------------- **/
+
+h3 {
+    font-size: 48px;
+}
+
+.nav-link, .offcanvas {
+    background-color: var(--nav-link-bg-color);
+    color: var(--color-3);
 }
 
 .btn {
-    background-color: var(--nav-active-color);
-    color: var(--active-text-color);
+    background-color: var(--nav-link-bg-color);
+    color: var(--color-3);
     text-decoration: none;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: 700;
     padding: 10px 35px;
     border-radius: 6px;
-    margin: 10px;
     transition: transform .4s;
 }
 
-.btn:hover {
+.btn.active, .about__tab.active, .navbar .nav-item .active {
+    background-color: var(--nav-active-color);
+    color: var(--active-text-color);
+}
+
+.btn:hover, .about__tab:hover {
     background-color: var(--nav-active-color);
     color: var(--active-text-color);
     transform: scale(1.1);
 }
 
-.hero, .about, .skill, .portfolio, .blog, .contact {
+.hero {
     height: 100vh;
+    border-bottom: 1px solid black;
 }
 
-/********* NAVIGATION *********/
+.about, .portfolio, .blog, .contact {
+    margin-top: 2em;
+    border-bottom: 1px solid black;
+}
 
+/** ---------------     </GLOBAL>        --------------- **/
+
+/** ---------------     <NAV SECTION>        --------------- **/
 .navbar {
     border-bottom: 1.5px solid black;
     padding: 0;
-    margin: 0;
 }
 
-.navbar-toggler {
-    border: 0;
-    border-radius: 0;
-    background-color: var(--nav-active-color);
-    color: var(--active-text-color);
-    border-radius: 6px;
-    justify-self: flex-end;
-}
-
-.offcanvas {
-    background-color: var(--nav-link-bg-color);
-    width: 50%;
-}
-
-.navbar-nav .nav-item .nav-link {
-    width: 200px;
-    background-color: var(--nav-link-bg-color);
-    color: var(--title-bg-color);
-    margin-left: 10px;
-    margin-top:5px;
+.navbar .nav-item .nav-link {
+    width: 150px;
+    margin: 1em .5em 0 .5em;
     font-size: 24px;
-    font-weight: 400;
 }
 
 .navbar .nav-item .active {
-    background-color: var(--nav-active-color);
-    color: var(--active-text-color);
-    padding-bottom: 1.5rem;
+    padding-bottom: 1em;
 }
+/** ---------------     </NAV SECTION>        --------------- **/
 
-/********* HERO SECTION *********/
-.hero p {
-    color: var(--nav-active-color);
-}
+/** ---------------     <HERO SECTION>        --------------- **/
 
-.hero__div {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.hero__div--content-1 {
-    width: 50%;
-}
-
-.hero__author {
-    margin-top: 3em;
-    font-size: 72px;
-}
-
-.hero hr {
-    width: 150px;
-    border: 2.5px solid black;
-    border-radius: 6px;
-}
-
-.hero__paragraph {
-    font-size: 32px;
-}
-
-.hero__div--content-2 {
-    width: 45%;
-    background-color: var(--title-bg-color);
-    text-align: center;
-    margin: 20px;
+.hero__text {
+    margin-left: 1em;
 }
 
 .hero__img {
-    width: 636px;
+    margin: 1em;
 }
 
-.hero__div--content-3 {
-    width: 5%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    padding: 10px;
-    overflow: hidden;
+.hero__links--vertical {
+    width: 10%;
 }
 
-.hero__div--content-3 p {
+.hero__text h1 {
+    font-size: 64px;
+}
+
+.hero__text hr {
+    border: 2px solid black;
+    width: 20%;
+}
+
+.hero__text p {
+    font-size: 24px;
+}
+
+.hero__img img{
+    width: 500px;
+}
+
+.hero__links--vertical p{
     writing-mode: vertical-rl;
     text-orientation: sideways;
+    font-size: 16px;
+    font-weight: 700;
 }
 
-.hero__div--content-3 a {
-    color: var(--title-bg-color);
+.hero__links--vertical a {
     text-align: right;
-    font-size: 24px;
+    font-size: 32px;
+    color: var(--color-3);
 }
 
-.hero__div--content-4 {
-    display: none;
+/** ---------------     </HERO SECTION>        --------------- **/
+
+/** ---------------     <ABOUT SECTION>        --------------- **/
+
+
+.about__tab {
+    font-size: 16px;
+    transition: transform .4s;
+    font-weight: 700;
 }
 
-/********* ABOUT SECTION *********/
-.about__div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2em;
+.about .tab-content {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    height: 400px;
 }
 
-.about__div--mobile {
-    display: none;
+/** Progress Bar **/
+
+.progress--arch {
+    position: relative;
+    margin: 4px;
+    float:left;
+    text-align: center;
 }
 
-.about__image {
-    text-align: right;
-    background-color: var(--title-bg-color);
-    padding: 0;
-    width: 30%;
+.barOverflow{ /* Wraps the rotating .bar */
+    position: relative;
+    overflow: hidden; /* Comment this line to understand the trick */
+    width: 100px; height: 45px; /* Half circle (overflow) */
+    margin-bottom: -14px; /* bring the numbers up */
 }
 
-.about__img {
-    width: 100%;
-    object-fit: cover;
+.bar{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100px; height: 100px; /* full circle! */
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 15px solid #eee;     /* half gray, */
+    border-bottom-color: var(--accent-color-2);  /* half azure */
+    border-right-color: var(--accent-color-2);
 }
+  
+/** ---------------     </ABOUT SECTION>        --------------- **/
 
-.__tabs {
-    width: 20%;
-    font-size: 24px;
-    background-color: var(--content-bg-color);
-    padding: 0;
+/** ---------------     <PORTFOLIO SECTION>        --------------- **/
+.portfolio {
+    border-bottom: 1px solid black;
 }
-
-.__tabs .nav-link {
-    width: 100%;
-    text-align: left;
-    padding-left: 10px;
-    border-radius: 0;
-}
-
-.__tabs .nav-link.active {
-    background-color: var(--nav-active-color);
-    color: var(--active-text-color);
-    border-radius: 0;
-}
-
-.about__tabs--content {
-    width: 80%;
-    font-size: 20px;
-    background-color: var(--content-bg-color);
-    padding: 20px;
-}
-
-.about__tabs--content p {
-    color: var(--nav-active-color);
-}
-
-.bio--details {
-    color: var(--nav-active-color);
-}
-
-#v-pills-bio .btn{
-    background-color: var(--nav-active-color);
-    color: var(--active-text-color);
-}
-
-/********* SKILL SECTION *********/
-.skill h2 {
-    font-size: 86px;
-    margin-top: 50px;
-    margin-left: 10px;
-}
-
-.skill__div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 2em;
-}
-
-.skill__div--mobile {
-    display: none;
-}
-
-.skill__div .__tabs {
-    height: 500px;
-    width: 30%;
-}
-
-.__contents {
-    font-size: 24px;
-    width: 70%;
-    background-color: var(--content-bg-color);
-}
-
-.__contents .row {
-    margin-top: 20px;
-}
-
-.progress-bar {
-    background-color: var(--title-bg-color);
-    color: var(--title-text-color);
-}
-
-/********* PORTFOLIO SECTION *********/
-.portfolio__div--mobile {
-    display: none;
-}
-
 .card {
-    background-color: var(--content-bg-color);
-    margin: 10px;
+    border: none;
     border-radius: 0;
+    margin: 1em;
+}
+
+.card-image img {
+    width: 800px;
 }
 
 .card-body {
-    margin: 0;
-    padding: 0;
-}
-
-.project-title {
-    background-color: var(--title-bg-color);
-    color: var(--title-text-color);
-    padding: .25rem;
+    margin-top: 2.5em;
 }
 
 .card-title {
-    font-size: 30px;
-    margin: 10px;
+    font-size: 36px;
 }
 
 .card-text {
-    color: var(--nav-active-color);
-    font-size: 18px;
-    margin: 10px;
+    font-size: 16px;
 }
 
-.card img {
-    margin-top: 10px;
+.card-text--2 {
+    font-weight: 700;
+}
+/** ---------------     </PORTFOLIO SECTION>        --------------- **/
+
+/** ---------------     <BLOG SECTION>        --------------- **/
+.blog__div {
+    margin-bottom: 2.5em;
 }
 
-.card-body--2 {
-    margin-left: 20px
+.carousel .card-body {
+    margin: 0 !important;
 }
 
-/********* BLOG SECTION *********/
-.carousel .card {
-    height: 500px;
+.carousel .card img {
+    border-radius: 0;
 }
 
+/** ---------------     </BLOG SECTION>        --------------- **/
 
-/********* CONTACT SECTION *********/
-.contact__form {
-    margin:20px auto;
-    padding: 20px;
+/** ---------------     <CONTACT SECTION>        --------------- **/
+.contact__div {
+    margin-bottom: 2em;
 }
 
 .form-floating {
-    margin-top:20px;
+    width: 800px;
 }
 
-.name, .email, .name:focus, .email:focus {
-    background-color: var(--content-bg-color);
-    border: 0;
+.form-control {
+    margin-top: 1em;
 }
 
-.form-floating .textarea {
-    height: 250px;
+textarea {
     resize: none;
-    border: 0;
-    background-color: var(--content-bg-color);
+    margin: 0 !important;
+    height: 300px !important;
 }
 
-/********* FOOTER *********/
-footer {
-    width: 100%;
-    background-color: var(--title-bg-color);
-    padding-top: 20px;
+input[type=submit] {
+    margin-top: 1em;
+    width: 300px !important;
 }
-
-footer a, h6, p {
-    text-decoration: none;
-    color: var(--title-text-color);
-}
-
-footer p {
-    word-wrap: break-word;
-}
-
-footer h6 {
-    font-size: 24px;
-}
-
-/********* MEDIA QUERIES *********/
-@media screen and (min-width: 320px) and (max-width: 720px) {
-    .offcanvas .nav-item .nav-link {
-        width: 100%;
-    }
-
-    .hero, .about, .skill, .portfolio {
-        display: none;
-    }
-
-    .hero, .about, .portfolio, .blog, .contact {
-        height: 200vh;
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        background: url("https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677062074/profile_pyzs83.png") center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .hero__div {
-        height: 100%;
-        background: linear-gradient(180deg, rgba(218,212,187,0) 0%, rgba(218,212,187,.2) 40%, rgba(218,212,187,1) 100%);
-    }
-
-    .hero__div--content-2, .hero__div--content-3 {
-        display: none;
-    }
-
-    .hero__div--content-1 {
-        width: 100%;
-    }
-
-    .hero__author {
-        margin-top: 8em;
-        font-size: 36px;
-    }
-
-    .hero__div--content-4 {
-        display: flex;
-        justify-content: flex-start;
-        align-content: center;
-        flex-direction: row;
-        padding: 10px;
-        gap: 15px;
-    }
-
-    .hero__div--content-4 a, .hero__div--content-4 p {
-        color: var(--title-bg-color);
-        text-align: right;
-        font-size: 18px;
-    }
-
-    .about {
-        display: flex;
-        flex-direction: column;
-        background: url("https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1677753757/My_project_r9fci2.png") center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .about__div {
-        height: 100%;
-        background: linear-gradient(180deg, rgba(218,212,187,0) 0%, rgba(218,212,187,.4) 30%, rgba(218,212,187,1) 100%);
-    }
-
-    .about__div--mobile {
-        display: block;
-        width: 100%;
-    }
-
-    .about__div--mobile .nav .nav-link {
-        color: var(--title-bg-color);
-        font-size: 16px;
-        border-radius: 0;
-    }
-
-    .about__div--mobile .nav .active {
-        background-color: var(--nav-active-color);
-        color: var(--active-text-color);
-        border-radius: 0;
-    }
-
-    .about__div--mobile .tab-content {
-        margin-top:5em;
-    }
-
-    .about__div--mobile p {
-        color: black;
-        font-size: 16px;
-    }
-
-    .__tabs, .__contents, .about__image, .about__tabs--content {
-        display: none;
-    }
-
-    .skill {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    .skill__div--mobile {
-        display: block;
-    }
-
-    .skill__div--mobile .tab-content{
-        margin-top: 5em;
-        font-size: 16px;
-    }
-
-    .skill__div--mobile .row,  .skill__div--mobile .row .progress {
-        margin-top: 10px;
-    }
-
-    .skill__div--mobile .row .progress {
-        margin-left: 20px;
-    }
-
-    .skill__div--mobile .nav .nav-link {
-        color: var(--title-bg-color);
-        font-size: 16px;
-        border-radius: 0;
-    }
-
-    .skill__div--mobile .nav .active {
-        background-color: var(--nav-active-color);
-        color: var(--active-text-color);
-        border-radius: 0;
-    }
-
-    .portfolio {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .portfolio__div--mobile {
-        display: block;
-    }
-
-    .portfolio__div--mobile .card-text {
-        font-size: 16px;
-    }
-
-    .card-group {
-        display: none;
-    }
-
-    .portfolio__div--mobile .card-title {
-        font-size: 30px;
-        margin: 5px;
-    }
-    
-    .portfolio__div--mobile .card-body--2, .blog .card-body--2 {
-        margin-left: 10px
-    }
-
-    @media screen and (min-width: 721px) and (max-width: 1000px) {
-
-    }
-}
-
-
-
-
+/** ---------------     </CONTACT SECTION>        --------------- **/
