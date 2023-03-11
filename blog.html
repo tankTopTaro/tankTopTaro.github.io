@@ -23,7 +23,7 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                     <li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">WRITE UPS</a></li>
                     <li class="nav-item"><a class="nav-link" href="./index.html/#portfolio">PORTFOLIO</a></li>
                     <li class="nav-item"><a class="nav-link" href="./index.html/#contact">CONTACT</a></li>
                 </ul>
@@ -35,8 +35,8 @@
     <!-- ---------------     <CONTENT SECTION>      --------------- -->
     <section class="blog__contents">
         <div class="container d-flex flex-row">
-            <div class="col-8 blog__div--content">
-                <div class="container blog__post--1">
+            <div class="col-8 blog__div--content tab-content" id="v-pills-tabContent">
+                <div class="container blog__post--1 tab-pane fade show active" id="v-pills-blog-1" role="tabpanel" aria-labelledby="v-pills-blog-1-tab" tabindex="0">
                     <div class="container__author d-flex flex-row align-items-center">
                         <img class="profile__image" src="./images/disgust.jpg" alt="eeehh" loading="lazy" style="width:50px; height: 50px;">
                         <div class="container">
@@ -204,7 +204,7 @@
                     
 
                 </div>
-                <div class="container blog__post--2">
+                <div class="container blog__post--2 tab-pane fade" id="v-pills-blog-2" role="tabpanel" aria-labelledby="v-pills-blog-2-tab" tabindex="0">
                     <div class="container__author d-flex flex-row align-items-center">
                         <img class="profile__image" src="./images/disgust.jpg" alt="eeehh" loading="lazy" style="width:50px; height: 50px;">
                         <div class="container">
@@ -273,7 +273,7 @@
                         <img src="./images/b2-task-23.jpg" alt="" style="width: 100%;">
                     </div>
                 </div>
-                <div class="container blog__post--3">
+                <div class="container blog__post--3 tab-pane fade" id="v-pills-blog-3" role="tabpanel" aria-labelledby="v-pills-blog-3-tab" tabindex="0">
                     <div class="container__author d-flex flex-row align-items-center">
                         <img class="profile__image" src="./images/disgust.jpg" alt="eeehh" loading="lazy" style="width:50px; height: 50px;">
                         <div class="container">
@@ -328,7 +328,12 @@
                     <h4>tankTopTaro</h4>
                     <p>Student | Web developer | Pen-Tester</p>
 
-                    <p>Blog Posts Links TBA</p>
+                    <div class="d-flex align-items-start">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                          <button class="nav-link active" id="v-pills-blog-1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-blog-1" type="button" role="tab" aria-controls="v-pills-blog-1" aria-selected="true">OWASP Juice Shop | THM</button>
+                          <button class="nav-link" id="v-pills-blog-2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-blog-2" type="button" role="tab" aria-controls="v-pills-blog-2" aria-selected="false">Web Enumeration | THM</button>
+                          <button class="nav-link" id="v-pills-blog-3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-blog-3" type="button" role="tab" aria-controls="v-pills-blog-3" aria-selected="false">Upload Vulnerabilities | THM</button>
+                    </div>
                 </div>
             </div>
         </div>
