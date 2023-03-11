@@ -1,21 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
 
 :root {
-    --color-1: #BDB8A2;
-    --color-2: #645F54;
-    --color-3: #54473F;
-    --primary-color: #91A297;
-    --secondary-color: #2C2F48;
-    --accent-color-1: #454957;
-    --accent-color-2: #576648;
-
-    --main-bg-color: #9a9681;
-    --title-bg-color: #4e4b42;
-    --title-text-color: #C5C0A9;
-    --nav-active-color: #4C4940;
-    --active-text-color: #D9D3BB;
-    --nav-link-bg-color: #B4AF9A;
-    --content-bg-color: #dad4bb;
+    --base-color: #DAD4BB;
+    --text-color-1: #fff;
+    --text-color-2: #000;
+    --action-color: #4c4940;
 }
 
 * {
@@ -25,7 +14,9 @@
 }
 
 body {
+    background: var(--base-color);
     font-family: 'Rajdhani', sans-serif;
+    color: var(--text-color-2);
 }
 
 /** ---------------     <GLOBAL>        --------------- **/
@@ -35,29 +26,33 @@ h3 {
 }
 
 .nav-link, .offcanvas {
-    background-color: var(--nav-link-bg-color);
-    color: var(--color-3);
+    background-color: var(--base-color);
+    font-weight: 500;
+    color: var(--text-color-2);
 }
 
 .btn {
-    background-color: var(--nav-link-bg-color);
-    color: var(--color-3);
+    background-color: var(--action-color);
+    color: var(--text-color-1);
     text-decoration: none;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 10px 35px;
     border-radius: 6px;
     transition: transform .4s;
 }
 
 .btn.active, .about__tab.active, .navbar .nav-item .active {
-    background-color: var(--nav-active-color);
-    color: var(--active-text-color);
+    background-color: var(--action-color);
+    color: var(--text-color-1);
+    font-weight: 600;
 }
 
 .btn:hover, .about__tab:hover {
-    background-color: var(--nav-active-color);
-    color: var(--active-text-color);
+    background-color: var(--base-color);
+    color: var(--text-color-2);
+    border: 1px solid #000;
+    font-weight: 600;
     transform: scale(1.1);
 }
 
@@ -131,7 +126,13 @@ h3 {
 .hero__links--vertical a {
     text-align: right;
     font-size: 32px;
-    color: var(--color-3);
+    color: var(--action-color);
+}
+
+.hero__links--vertical a:hover {
+    text-align: right;
+    font-size: 32px;
+    color: var(--text-color-1);
 }
 
 /** ---------------     </HERO SECTION>        --------------- **/
@@ -174,8 +175,8 @@ h3 {
     border-radius: 50%;
     box-sizing: border-box;
     border: 15px solid #eee;     /* half gray, */
-    border-bottom-color: var(--accent-color-2);  /* half azure */
-    border-right-color: var(--accent-color-2);
+    border-bottom-color: var(--action-color);  /* half azure */
+    border-right-color: var(--action-color);
 }
   
 /** ---------------     </ABOUT SECTION>        --------------- **/
@@ -250,3 +251,59 @@ input[type=submit] {
     width: 300px !important;
 }
 /** ---------------     </CONTACT SECTION>        --------------- **/
+
+/** ---------------     <FOOTER SECTION>        --------------- **/
+footer h6 {
+    font-weight: 600;
+    color: var(--text-color-2);
+}
+
+footer p {
+    font-weight: 500;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-color-2);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--text-color-1);
+}
+
+/** ---------------     </FOOTER SECTION>        --------------- **/
+
+/** ---------------     <BLOG PAGE STYLES>        --------------- **/
+.blog__div--content {
+    margin: 1em;
+}
+
+.blog__post--1 {
+    display: none;
+}
+
+.blog__post--2 {
+    display: none;
+}
+
+.blog__div--author {
+    border-left: 1px solid #484848;
+}
+
+.blog__div--author .container, .blog__div--content .container {
+    margin-top: 2em;
+    margin-left: .8em;
+}
+
+.container__author .container {
+    margin-top: 1em;
+    margin-left: 0;
+}
+.profile__image {
+    border-radius: 50%;
+    border: 1px solid #eee;
+    object-fit: contain;
+}
+/** ---------------     </BLOG PAGE STYLES>        --------------- **/
+

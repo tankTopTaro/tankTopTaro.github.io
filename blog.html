@@ -4,20 +4,367 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin's Portfolio</title>
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/be38a31748.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="container-fluid nav__div">
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="./index.html" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="./blog.html" class="nav-link active">BLOG</a></li>
-                <li class="nav-item"><a href="./portfolio.html" class="nav-link">PORTFOLIO</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
-            </ul>
+    <!-- ---------------     <NAVIGATION BAR>       --------------- -->
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler btn ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">BLOG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html/#portfolio">PORTFOLIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html/#contact">CONTACT</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+    <!-- ---------------     </NAVIGATION BAR>      --------------- -->
+
+    <!-- ---------------     <CONTENT SECTION>      --------------- -->
+    <section class="blog__contents">
+        <div class="container d-flex flex-row">
+            <div class="col-8 blog__div--content">
+                <div class="container blog__post--1">
+                    <div class="container__author d-flex flex-row align-items-center">
+                        <img class="profile__image" src="./images/disgust.jpg" alt="eeehh" loading="lazy" style="width:50px; height: 50px;">
+                        <div class="container">
+                            <strong>tankTopTaro</strong>
+                            <p>February 10, 2023</p>
+                        </div>
+                    </div>
+                    <div class="container container__blog">
+                        <h2><span>OWASP Juice Shop</span> | THM</h2>
+                        <img src="./images/juiceshop-banner.png" alt="" style="width: 100%;">
+
+                        <h5>RECON</h5>
+                        <img src="./images/task_2-recon.jpg" alt="" style="width: 100%;">
+                        <p>Get a feel around the site by navigating and clicking everything in it. Take note of any interesting details you find.</p>
+                        
+                        <p class="question">What's the Administrator's email address?</p>
+                        <p>Viewing the reviews in each items will show the user's email address.</p>
+                        <img src="./images/task_2-ans1.jpg" alt="" style="width: 100%;">
+                        
+                        <p class="question">What parameter is used for searching?</p>
+                        <img src="./images/task_2-recon-2.jpg" alt="" style="width: 100%;">
+                        <p>Pay attention to the URL as it updates with the text you entered in the search bar.</p>
+                        <p>You can see the parameter after <strong>/#/search?</strong> the letter <strong>q</strong></p>
+    
+                        <p class="question">What show does Jim reference in his review?</p>
+                        <img src="./images/task_2-recon-3.jpg" alt="" style="width: 100%;">
+                        <p>Jim mentions a replicator in his review of the Green Smoothie product.</p>
+                        <p>If you search what a "replicator" is we can see which show it links to.</p>
+                        <img src="./images/task_2-ans2.jpg" alt="" style="width: 100%;">
+    
+                        <h5>INJECT THE JUICE</h5>
+                        <img src="./images/task_3-inject.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Login to the admin account!</p>
+                        <p>Navigate to the Juice Shop login page then enter some details to the email and password fields.</p>
+                        <p>Before submitting the request. Have Burp ready to intercept the request. </p>
+                        <img src="./images/task_3-inject-1.jpg" alt="" style="width: 100%;">
+                        <p>Replace the character you used on the email with <strong>' or 1=1--</strong> and then forward the request to the server.</p>
+                        <img src="./images/task_3-inject-2.jpg" alt="" style="width: 100%;">
+                        <p>Get the flag once you successfully login.</p>
+                        <img src="./images/task_3-inject-3.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Login to Bender's account!</p>
+                        <p>Create another Login request using <strong>bender@juice-sh.op</strong> as the email and intercept the request with Burp.</p>
+                        <p>Add the following characters to the email value <strong>'--</strong> of the intercepted request.</p>
+                        <img src="./images/task_3-inject-4.jpg" alt="" style="width: 100%;">
+                        <p>Forward the request to get the flag for this task.</p>
+                        <img src="./images/task_3-inject-5.jpg" alt="" style="width: 100%;">
+    
+                        <h5>Who broke my lock?!</h5>
+                        <img src="./images/task_4-auth.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Bruteforce the Administrator account's password!</p>
+                        <p>Intercept a login request and this time send it througn <strong>Intruder</strong>.</p>
+                        <p>Go to <strong>Payload Positions</strong> and select the <strong>Clear § button</strong>.</p>
+                        <p>Place two <strong>§§</strong> inside the password field.</p>
+                        <img src="./images/task_4-auth-1.jpg" alt="" style="width: 100%;">
+                        <p>We will use the <strong>best1050.txt</strong> for our payload. Once that is loaded into Burp start the attack.</p>
+                        <p>Watch out for a Payload request with the status code <strong>200</strong>. You can use that to login to the account and get the flag.</p>
+                        <img src="./images/task_4-auth-2.jpg" alt="" style="width: 100%;">
+                        <img src="./images/task_4-auth-3.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Reset Jim's password!</p>
+                        <p>Let's try to break into Jim's account by exploiting the reset password mechanism.</p>
+                        <p>In the previous task we figure out that Jim has something to do with Star Trek. Do a quick search to "<strong>Jim Star Trek</strong>"</p>
+                        <img src="./images/task_4-auth-4.jpg" alt="" style="width: 100%;">
+                        <p>The security question is asking us for the middle name of his eldest sibling. Doing further research might give us a hint.</p>
+                        <img src="./images/task_4-auth-5.jpg" alt="" style="width: 100%;">
+                        <p>Providing that answer might allow us to reset Jim's password to whatever we want.</p>
+                        <img src="./images/task_4-auth-6.jpg" alt="" style="width: 100%;">
+                        <p>Hit the change button and get the flag.</p>
+                        <img src="./images/task_4-auth-7.jpg" alt="" style="width: 100%;">
+    
+                        <h5>AH! Don't LOOK</h5>
+                        <img src="./images/task_5-data.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Access the Confidential Document!</p>
+                        <p>Navigate to the About Us page of the Juice Shop and try to find the link in the paragraph.</p>
+                        <p>Clicking the link will take you to <strong>/ftp/legal.md</strong> which is just an empty page.</p>
+                        <p>Backtracking to <strong>/ftp/</strong> might reveal a page that we should not be able to go to.</p>
+                        <img src="./images/task_5-data-1.jpg" alt="" style="width: 100%;">
+                        <p>You can download any files that piques your interest. Return to the home page to reveal the flag.</p>
+                        <img src="./images/task_5-data-2.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Login to MC SafeSearch's account!</p>
+                        <iframe width="100%" height="315px" src="https://www.youtube.com/embed/v59CX2DiX0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <p>If you did the recon you should have notice that MC SafeSearch has an account to the Juice Shop.</p>
+                        <img src="./images/task_5-data-3.jpg" alt="" style="width: 100%;">
+                        <p>His password was revealed in his song if you listen to it.</p>
+                        <img src="./images/task_5-data-4.jpg" alt="" style="width: 100%;">
+                        <p>Login to his account to get the flag.</p>
+                        <img src="./images/task_5-data-5.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Download the Backup file!</p>
+                        <p>Did you try to download the files from the <strong>/ftp/</strong> page? You might have tried to download the <strong>package.json.bak</strong> file but got an error like so.</p>
+                        <img src="./images/task_5-data-6.jpg" alt="" style="width: 100%;">
+                        <p>We need to inject a Poison Null Byte to the URL to download the file.</p>
+                        <p>A Poison Null Byte is simply just <strong>%00</strong>. But we need to encode it into a URL encoded format to use it</p>
+                        <img src="./images/task_5-data-7.jpg" alt="">
+                        <p>Once you download the file return to the home page to get the flag.</p>
+                        <img src="./images/task_5-data-8.jpg" alt="" style="width: 100%;">
+    
+                        <h5>Who's flying this thing?</h5>
+                        <img src="./images/task_6-priv.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Access the administration page!</p>
+                        <p>Inspect the Juice Shop from you browser and go to the Debugger tab (Sources if you are using Chrome). Look for a <strong>main.es2015.js</strong> file.</p>
+                        <img src="./images/task_6-priv-1.jpg" alt="" style="width: 100%;">
+                        <p>Click the <strong>{}</strong> button to make the file more reader freiendly.</p>
+                        <p>Search for the term <strong>admin</strong>.</p>
+                        <img src="./images/task_6-priv-2.jpg" alt="" style="width: 100%;">
+                        <p>What we want is the <strong>path: 'administration'</strong>. This hints to the page <strong>/#/administration</strong> but we need an Admin account to view the page.</p>
+                        <p>Login to a Admin account then navigate to <strong>/#/administration</strong> to get the flag.</p>
+                        <img src="./images/task_6-priv-3.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">View another user's shopping basket!</p>
+                        <p>Login as the admin and click on <strong>Your Basket</strong>. Have Burp intercept the request.</p>
+                        <p>Forward the request until you see a <strong>GET /rest/basket/1 HTTP/1.1</strong></p>
+                        <img src="./images/task_6-priv-4.jpg" alt="" style="width: 100%;">
+                        <p>Edit the request by changing the <strong>1</strong> to a <strong>2</strong> then forward the request.</p>
+                        <img src="./images/task_6-priv-5.jpg" alt="" style="width: 100%;">
+                        <p>The page will now show you the basket of UserID 2. This can be done to other UserID as well provided that they have one.</p>
+                        <img src="./images/task_6-priv-6.jpg" alt="" style="width: 100%;">
+                        <img src="./images/task_6-priv-7.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Remove all 5-star reviews!</p>
+                        <p>Using the admin account navigate to the <strong>/#/administration</strong> page.</p>
+                        <img src="./images/task_6-priv-8.jpg" alt="" style="width: 100%;">
+                        <p>Delete the 5-star review to get the flag.</p>
+                        <img src="./images/task_6-priv-9.jpg" alt="" style="width: 100%;">
+    
+                        <h5>Where did that come from?</h5>
+                        <img src="./images/task_7-xss.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Perform a DOM XSS!</p>
+                        <p>On the search bar type</p>
+                        <img src="./images/task_7-xss-1.jpg" alt="" style="width: 100%;">
+                        <p>This will trigger an alert and reveal the flag.</p>
+                        <img src="./images/task_7-xss-2.jpg" alt="" style="width: 100%;">
+                        <img src="./images/task_7-xss-3.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Perform a Persistent XSS!</p>
+                        <p>Login to the admin account and the navigate to the <strong>Last Login IP</strong> page under the Privacy & Security options.</p>
+                        <img src="./images/task_7-xss-4.jpg" alt="" style="width: 100%;">
+                        <p>Logout the account and have Burp intercept the logout request.</p>
+                        <img src="./images/task_7-xss-5.jpg" alt="" style="width: 100%;">
+                        <p>Head to the Inspector and add a new Request Header.</p>
+                        <img src="./images/task_7-xss-6.jpg" alt="" style="width: 100%;">
+                        <p>Forward the request to the server once you added the new Request Header.</p>
+                        <p>We should see the XSS alert when we navigate to the <strong>Last Login IP</strong> page again.</p>
+                        <img src="./images/task_7-xss-7.jpg" alt="" style="width: 100%;">
+                        <img src="./images/task_7-xss-8.jpg" alt="" style="width: 100%;">
+    
+                        <p class="question">Perform a Reflected XSS!</p>
+                        <p>Using the admin account, go to <strong>Order History</strong> page.</p>
+                        <img src="./images/task_7-xss-9.jpg" alt="" style="width: 100%;">
+                        <p>Click the truck icon, it should bring us to the <strong>Track Result</strong> page.</p>
+                        <img src="./images/task_7-xss-10.jpg" alt="" style="width: 100%;">
+                        <p>Replace the id value with the iframe XSS.</p>
+                        <img src="./images/task_7-xss-11.jpg" alt="" style="width: 100%;">
+                        <p>Submitting the URL and refreshing the page should give us an alert and a flag.</p>
+                        <img src="./images/task_7-xss-12.jpg" alt="" style="width: 100%;">
+                        <img src="./images/task_7-xss-13.jpg" alt="" style="width: 100%;">
+                    </div>
+                    
+
+                </div>
+                <div class="container blog__post--2">
+                    <div class="container__author d-flex flex-row align-items-center">
+                        <img class="profile__image" src="./images/disgust.jpg" alt="eeehh" loading="lazy" style="width:50px; height: 50px;">
+                        <div class="container">
+                            <strong>tankTopTaro</strong>
+                            <p>February 15, 2023</p>
+                        </div>
+                    </div>
+                    <div class="container container__blog">
+                        <h2><span>Web Enumeration</span> | THM</h2>
+                        <img src="./images/webenumeration-banner.png" alt="" style="width: 100%;">
+
+                        <h5>Practical: Gobuster</h5>
+                        <p class="question">Run a directory scan on the host. Other than the standard css, image and js directories, what other directories are available?</p>
+                        <img src="./images/b2-task-1.jpg" alt="" style="width: 100%;">
+                        <img src="./images/b2-task-2.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">Run a directory scan on the host. In the <strong>C******</strong> directory, what file extensions exists?</p>
+                        <img src="./images/b2-task-3.jpg" alt="" style="width: 100%;">
+                        <img src="./images/b2-task-4.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">There's a flag out there that can be found by directory scanning! Find it!</p>
+                        <p>The easier way to do this is by navigating through the directories we found in the previous scans.</p>
+                        <img src="./images/b2-task-5.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">There are some virtual hosts running on this server. What are they?</p>
+                        <p>Since Gobuster is not giving me the result that I wanted, I decided to look for a way around the problem and find that <strong>ffuf</strong> works. So I used that for this problem.</p>
+                        <img src="./images/b2-task-6.jpg" alt="" style="width: 100%;">
+                        <img src="./images/b2-task-7.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">There's another flag to be found in one of the virtual hosts! Find it!</p>
+                        <img src="./images/b2-task-8.jpg" alt="" style="width: 100%;">
+                        <p>The code above will perform a Gobuster scan against both vhost at once.</p>
+                        <img src="./images/b2-task-9.jpg" alt="" style="width: 100%;">
+                        <p>Once you got the path you can just browse to it to see the flag.</p>
+                        <img src="./images/b2-task-10.jpg" alt="" style="width: 100%;">
+                        
+                        <h5>Practical: WPScan</h5>
+                        <p class="question">Enumerate the site, what is the name of the theme that is detected as running?</p>
+                        <img src="./images/b2-task-11.jpg" alt="" style="width: 100%;">
+                        <img src="./images/b2-task-12.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">Enumerate the site, what is the name of the plugin that WPScan has found?</p>
+                        <img src="./images/b2-task-13.jpg" alt="" style="width: 100%;">
+                        <img src="./images/b2-task-14.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">Enumerate the site, what username can WPScan find?</p>
+                        <img src="./images/b2-task-15.jpg" alt="" style="width: 100%;">
+                        <img src="./images/b2-task-16.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">Construct a WPScan command to brute-force the site with this username, using the <strong>rockyou wordlist</strong> as the password list. What is the password to this user?</p>
+                        <img src="./images/b2-task-17.jpg" alt="" style="width: 100%;">
+                        <img src="./images/b2-task-18.jpg" alt="" style="width: 100%;">
+
+                        <h5>Practical: Nikto</h5>
+                        <p class="question">What is the name & version of the web server that Nikto has determined running of <strong>port 80</strong>?</p>
+                        <img src="./images/b2-task-19.jpg" alt="" style="width: 100%;">
+                        <img src="./images/b2-task-20.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">There is another web server running on another port. What is the name & version of this web server?</p>
+                        <p>You can do a nmap scan first to see which ports are open.</p>
+                        <img src="./images/b2-task-21.jpg" alt="" style="width: 100%;">
+                        <p>Now you can scan it with nikto.</p>
+                        <img src="./images/b2-task-22.jpg" alt="" style="width: 100%;">
+
+                        <p class="question">What is the name of the Cookie that this JBoss server gives?</p>
+                        <img src="./images/b2-task-23.jpg" alt="" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="container blog__post--3">
+                    <div class="container__author d-flex flex-row align-items-center">
+                        <img class="profile__image" src="./images/disgust.jpg" alt="eeehh" loading="lazy" style="width:50px; height: 50px;">
+                        <div class="container">
+                            <strong>tankTopTaro</strong>
+                            <p>March 3, 2023</p>
+                        </div>
+                    </div>
+                    <div class="container container__blog">
+                        <h2><span>Upload Vulnerabilities</span> | THM</h2>
+                        <img src="./images/upload-banner.png" alt="" style="width: 100%;">
+
+                        <h5>Challenge</h5>
+                        <p>Head over to <strong>jewel.uploadvulns.thm</strong> and try to get the flag in <strong>/var/www</strong>.</p>
+                        <p><span>Note</span>: Not all webserver have PHP backend.</p>
+                        <p class="question">Recon:</p>
+                        <p>Start a directory scan using Gobuster.</p>
+                        <img src="./images/b3-task-1.jpg" alt="" width="100%">
+                        <p>While Gobuster is scanning go to the homepage and try to inspect it with the Debugger. Look for javascript files that acts as the filter for the files.</p>
+                        <img src="./images/b3-task-2.jpg" alt="" width="100%">
+                        <p>Also check what web server the site is using.</p>
+                        <img src="./images/b3-task-3.jpg" alt="" width="100%">
+                        <p>The Gobuster scan gives us two pages we can use for the attack.</p>
+                        <img src="./images/b3-task-4.jpg" alt="" width="100%">
+                        <img src="./images/b3-task-5.jpg" alt="" width="100%">
+
+                        <p class="question">Test run: Uploading an innocent file.</p>
+                        <p>We know that the page accept jpeg files. So we'll try to upload this file.</p>
+                        <img src="./images/b3-task-6.jpg" alt="" width="100%">
+                        <p>Do another directory scan to see where our file is uploaded</p>
+                        <img src="./images/b3-task-7.jpg" alt="" width="100%">
+                        <p>If we go to the <strong>/content/image-file-name.jpg</strong> we can see that our file is successfully uploaded.</p>
+                        <img src="./images/b3-task-8.jpg" alt="" width="100%">
+
+                        <p class="question">Uploading a malicious file.</p>
+                        <p>Using <strong>Burp</strong> intercept the response for the <strong>upload.js</strong></p>
+                        <img src="./images/b3-task-9.jpg" alt="" width="100%">
+                        <p>Modify the response to bypass the client-side filter.</p>
+                        <img src="./images/b3-task-10.jpg" alt="" width="100%">
+                        <p>Try to upload a malicious file, and find its name by scanning the content directory.</p>
+                        <img src="./images/b3-task-11.jpg" alt="" width="100%">
+                        <p>Start your Netcat listener and once you found the name of you shell go to the <strong>/admin</strong> page and try to access the file from there.</p>
+                        <img src="./images/b3-task-12.jpg" alt="" width="100%">
+                        <p>See if Netcat connects to the shell and then navigate to where the flag is</p>
+                        <img src="./images/b3-task-13.jpg" alt="" width="100%">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 blog__div--author">
+                <div class="container">
+                    <img class="profile__image" src="./images/disgust.jpg" alt="eeehh" loading="lazy" style="width:80px; height: 80px;">
+                    <h4>tankTopTaro</h4>
+                    <p>Student | Web developer | Pen-Tester</p>
+
+                    <p>Blog Posts Links TBA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------     </CONTENT SECTION>      --------------- -->
+
+    <!-- ---------------     <FOOTER SECTION>        --------------- -->
+    <footer class="text-center text-lg-start text-muted">
+        <section class="footer">
+            <div class="container-fluid text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6>Kevin</h6>
+                        <p>This site has a lot of shortcoming. My design skills is dreadful.</p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6>Quick Links</h6>
+                        <p><a href="#">HOME</a></p>
+                        <p><a href="#">ABOUT ME</a></p>
+                        <p><a href="#">PORTFOLIO</a></p>
+                        <p><a href="#">BLOG</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6>Contact</h6>
+                        <p><i class="fa-solid fa-house"></i>&emsp;31-36 Carnation St., Neo Calapan Subd., Brgy. Bulusan, Calapan City, Or. Mindoro, 5200</p>
+                        <p><i class="fa-solid fa-phone"></i>&emsp;+63-998-4268-980</p>
+                        <p><i class="fa-solid fa-envelope"></i>&emsp;balmoresk3v1n@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                <p>&copy; 2023, Kevin Balmores</p>
+            </div>
+        </section>
+    </footer>
+    <!-- ---------------     </FOOTER SECTION>       --------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
