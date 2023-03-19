@@ -29,3 +29,7 @@
 2. More write ups.
 3. Improve design.
 --- 
+
+## BUGS
+1. Offcanvas navigation doesn't seem to work as intended. Navigation will scroll back to top as offcanvas navigation is closed(dismiss).
+
