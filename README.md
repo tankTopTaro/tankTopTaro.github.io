@@ -30,7 +30,7 @@
 3. Improve design.
 --- 
 
-## BUGS
+## BUGS | ISSUES
 1. Offcanvas navigation doesn't seem to work as intended. Navigation will scroll back to top as offcanvas navigation is closed(dismiss). {can be fixed by add the class 'fixed-top' to the navbar.
 2. Haven't implemented media queries for landscape devices. Spacinng will be out of whack if you try it on lanscape mode.
 
