@@ -215,7 +215,7 @@ body {
     }
 
     .portfolio {
-        height: 150vh;
+        height: 200vh;
     }
 
     .portfolio__desktop {
@@ -249,7 +249,7 @@ body {
     }
 
     .writeup {
-        height: 180vh;
+        height: 240vh;
         color: var(--text-color)
     }
 
