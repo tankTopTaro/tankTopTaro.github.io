@@ -508,7 +508,7 @@ body {
     /** ----- /Text Effect ----- **/
 
     .about {
-        height: 100vh;
+        height: 140vh;
     }
 
     .about h2, .portfolio h2, .contact h2 {
@@ -552,7 +552,7 @@ body {
     }
 
     .portfolio {
-        height: 130vh;
+        height: 200vh;
     }
 
     .portfolio__desktop {
@@ -586,7 +586,7 @@ body {
     }
 
     .writeup {
-        height: 180vh;
+        height: 200vh;
         color: var(--text-color)
     }
 
@@ -826,7 +826,7 @@ body {
     /** ----- /Text Effect ----- **/
 
     .about {
-        height: 100vh;
+        height: 140vh;
     }
 
     .about h2, .portfolio h2, .contact h2 {
@@ -904,7 +904,7 @@ body {
     }
 
     .writeup {
-        height: 180vh;
+        height: 200vh;
         color: var(--text-color)
     }
 
@@ -1143,7 +1143,7 @@ body {
     /** ----- /Text Effect ----- **/
 
     .about {
-        height: 120vh;
+        height: 140vh;
     }
 
     .about h2, .portfolio h2, .contact h2 {
@@ -1187,7 +1187,7 @@ body {
     }
 
     .portfolio {
-        height: 120vh;
+        height: 150vh;
     }
 
     .portfolio__mobile {
@@ -1221,7 +1221,7 @@ body {
     }
 
     .writeup {
-        height: 100vh;
+        height: 150vh;
         color: var(--text-color)
     }
 
