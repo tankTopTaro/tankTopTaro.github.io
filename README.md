@@ -15,6 +15,7 @@
 1. HTML, CSS, Javascript
 2. Github Pages
 3. Github
+4. Bootstrap
 ---
 
 ## CURRENT FEATURES IMPLEMENTED
