@@ -25,7 +25,7 @@
 ---
 
 ## ADDITIONAL POST-RELEASE FEATURES (OPTIONAL)
-1. More content for Portfolio.
+1. More projects for Portfolio.
 2. More write ups.
 3. Improve design.
 --- 
