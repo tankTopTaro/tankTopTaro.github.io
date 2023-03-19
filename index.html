@@ -4,42 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    
-    <script src="https://kit.fontawesome.com/be38a31748.js" crossorigin="anonymous"></script>
+    <title>Kevin's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/be38a31748.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <!-- ---------------     <NAVIGATION BAR>       --------------- -->
-    <nav class="navbar navbar-expand-md">
-        <button class="navbar-toggler btn ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <nav class="navbar navbar-dark navbar-expand-md">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <i class="fa-solid fa-bars"></i>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="offcanvas-header" data-bs-theme="dark">
+                <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                    <li class="nav-item"><a class="nav-link active" href="#home">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./blog.html">WRITE UPS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#hero">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT ME</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">PORTFOLIO</a></li>
+                    <li class="nav-item"><a class="nav-link"  href="#writeup">WRITE UPS</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- ---------------     </NAVIGATION BAR>      --------------- -->
-
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
     <!-- ---------------     <HERO SECTION>        --------------- -->
     <section class="hero text-uppercase" id="hero">
         <div class="container-fluid d-flex flex-row align-items-center hero__div">
             <div class="container p-2 hero__text">
-                <h1>Kevin <strong>BALMORES</strong></h1>
+                <h1>Kevin <span>BALMORES</span></h1>
                 <hr>
-                <p>Front-End Developer</p>
+                <div class="console-container">
+                    <span id="text"></span>
+                    <div class="console-underscore" id="console">&#95;</div>
+                </div>
                 <a href="#" class="btn">Download CV</a>
             </div>
             <div class="container p-2 hero__img">
@@ -58,23 +64,23 @@
     <!-- ---------------     <ABOUT SECTION>        --------------- -->
     <section class="about text-lg-start" id="about">
         <div class="container-fluid about__div">
-            <div class="container text-center text-md-start tab__container">
-                <h3>ABOUT</h3>
-                <div class="row nav nav_pills nav-fill" id="pills-tab" role="tablist">
-                    <div class="col" role="presentation"><a class="nav-link about__tab active" id="pills-bio-tab" data-bs-toggle="pill" data-bs-target="#pills-bio" role="tab" aria-controls="pills-bio" aria-selected="true">BIO</a></div>
-                    <div class="col" role="presentation"><a class="nav-link about__tab" id="pills-education-tab" data-bs-toggle="pill" data-bs-target="#pills-education" role="tab" aria-controls="pills-education" aria-selected="false">EDUCATION</a></div>
-                    <div class="col" role="presentation"><a class="nav-link about__tab" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" role="tab" aria-controls="pills-experience" aria-selected="false">EXPERIENCE</a></div>
-                    <div class="col" role="presentation"><a class="nav-link about__tab" id="pills-skills-tab" data-bs-toggle="pill" data-bs-target="#pills-skills" role="tab" aria-controls="pills-skills" aria-selected="false">SKILLS</a></div>
+            <div class="container-fluid text-lg-start text-md-start tab__container">
+                <h2>ABOUT ME</h2>
+                <div class="d-flex flex-row align-items-start row nav nav_pills nav-fill" id="pills-tab" role="tablist">
+                    <div class="col p-2" role="presentation"><a class="nav-link about__tab active" id="pills-bio-tab" data-bs-toggle="pill" data-bs-target="#pills-bio" role="tab" aria-controls="pills-bio" aria-selected="true">BIO</a></div>
+                    <div class="col p-2" role="presentation"><a class="nav-link about__tab" id="pills-education-tab" data-bs-toggle="pill" data-bs-target="#pills-education" role="tab" aria-controls="pills-education" aria-selected="false">EDUCATION</a></div>
+                    <div class="col p-2" role="presentation"><a class="nav-link about__tab" id="pills-skills-tab" data-bs-toggle="pill" data-bs-target="#pills-skills" role="tab" aria-controls="pills-skills" aria-selected="false">SKILLS</a></div>
+                    <div class="col p-2" role="presentation"><a class="nav-link about__tab" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" role="tab" aria-controls="pills-experience" aria-selected="false">EXPERIENCE</a></div>
                 </div>
                 <div class="row tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-bio" role="tabpanel" aria-labelledby="pills-bio-tab" tabindex="0">
-                        <p>A computer hobbyist with a passion in learning new things. Currently I study Web Development with the help of Kodego.</p>
-                        <p>Age: &emsp;<strong>29</strong></p>
-                        <p>Nationality: &emsp;<strong>FILIPINO</strong></p>
-                        <p>Freelance: &emsp;<strong>Available</strong></p>
-                        <p>Address: &emsp;<strong>Calapan City, Or. Mindoro</strong></p>
-                        <p>Phone: &emsp;<strong>+63-998-4268-980</strong></p>
-                        <p>Email: &emsp;<strong>balmoresk3v1n@gmail.com</strong></p>
+                        <p>A computer hobbyist with a passion for learning new things. Currently I study Web Development with the help of Kodego.</p>
+                        <p>Age: &emsp;<b>29</b></p>
+                        <p>Nationality: &emsp;<b>FILIPINO</b></p>
+                        <p>Freelance: &emsp;<b>Available</b></p>
+                        <p>Address: &emsp;<b>Calapan City, Or. Mindoro</b></p>
+                        <p>Phone: &emsp;<b>+63-998-4268-980</b></p>
+                        <p>Email: &emsp;<b>balmoresk3v1n@gmail.com</b></p>
                         <a href="#" class="btn">Contact Me</a>
                     </div>
                     <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab" tabindex="0">
@@ -82,7 +88,7 @@
                             <div class="col-4"><p>2011 — 2016</p></div>
                             <div class="col-8">
                                 <p>
-                                    <strong>BS INFORMATION TECHNOLOGY</strong>,<br>
+                                    <b>BS INFORMATION TECHNOLOGY</b>,<br>
                                     <em>Innovative College of Science & Technology</em>
                                 </p>
                             </div>
@@ -91,7 +97,7 @@
                             <div class="col-4"><p>2019 — 2020</p></div>
                             <div class="col-8">
                                 <p>
-                                    <strong>BS INFORMATION TECHNOLOGY</strong>,<br>
+                                    <b>BS INFORMATION TECHNOLOGY</b>,<br>
                                     <em>ACLC College of Calapan</em>
                                 </p>
                             </div>
@@ -100,92 +106,77 @@
                             <div class="col-4"><p>2020 — 2022</p></div>
                             <div class="col-8">
                                 <p>
-                                    <strong>BS COMPUTER SCIENCE</strong>,<br>
+                                    <b>BS COMPUTER SCIENCE</b>,<br>
                                     <em>AMA Online Education</em>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="pills-experience" role="tabpanel" aria-labelledby="pills-experience-tab" tabindex="0">
-                        <p><strong>Attending Kodego Bootcamp 2023</strong></p>
-                    </div>
                     <div class="tab-pane fade" id="pills-skills" role="tabpanel" aria-labelledby="pills-skills-tab" tabindex="0">
-                        <div class="row justify-content-center">
+                        <div class="row">
                             <div class="col">
-                                <div class="progress--arch">
-                                    <div class="barOverflow">
-                                      <div class="bar"></div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 60%">60%</div>
                                     </div>
-                                    <span>60</span>%
-                                    <p>HTML / CSS</p>
+                                    <p>HTML & CSS</p>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="progress--arch">
-                                    <div class="barOverflow">
-                                      <div class="bar"></div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 30%">30%</div>
                                     </div>
-                                    <span>10</span>%
                                     <p>Javascript</p>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="progress--arch">
-                                    <div class="barOverflow">
-                                      <div class="bar"></div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 40%">40%</div>
                                     </div>
-                                    <span>65</span>%
-                                    <p>Python</p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="progress--arch">
-                                    <div class="barOverflow">
-                                      <div class="bar"></div>
-                                    </div>
-                                    <span>15</span>%
-                                    <p>Pen-Testing</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col">
-                                <div class="progress--arch">
-                                    <div class="barOverflow">
-                                      <div class="bar"></div>
-                                    </div>
-                                    <span>50</span>%
-                                    <p>Touch Typing</p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="progress--arch">
-                                    <div class="barOverflow">
-                                      <div class="bar"></div>
-                                    </div>
-                                    <span>30</span>%
                                     <p>Wireframing</p>
                                 </div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 20%">20%</div>
+                                    </div>
+                                    <p>3D Modeling</p>
+                                </div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 80%">80%</div>
+                                    </div>
+                                    <p>Prototyping</p>
+                                </div>
                             </div>
                             <div class="col">
-                                <div class="progress--arch">
-                                    <div class="barOverflow">
-                                      <div class="bar"></div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 70%">70%</div>
                                     </div>
-                                    <span>20</span>%
+                                    <p>Python</p>
+                                </div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 35%">35%</div>
+                                    </div>
+                                    <p>Penetration Testing</p>
+                                </div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 100%">100%</div>
+                                    </div>
+                                    <p>Debugging</p>
+                                </div>
+                                <div class="container">
+                                    <div class="progress" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+                                        <div class="progress-bar" style="width: 25%">25%</div>
+                                    </div>
                                     <p>Photo Editing</p>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="progress--arch">
-                                    <div class="barOverflow">
-                                      <div class="bar"></div>
-                                    </div>
-                                    <span>100</span>%
-                                    <p>Debugging</p>
-                                </div>
-                            </div>
                         </div>
+                        
+                    </div>
+                    <div class="tab-pane fade" id="pills-experience" role="tabpanel" aria-labelledby="pills-experience-tab" tabindex="0">
+                        <p><b>Attending Kodego Bootcamp 2023</b></p>
                     </div>
                 </div>
             </div>
@@ -196,36 +187,85 @@
     <!-- ---------------     <PORTFOLIO SECTION>        --------------- -->
     <section class="portfolio text-lg-start" id="portfolio">
         <div class="container-fluid d-flex flex-column portfolio__div">
-            <div class="container">
-                <h3>Portfolio</h3>
-                <div class="card d-flex flex-row">
-                    <div class="card-image order-1">
-                        <img class="img-fluid " src="./images/tea-house.jpg" alt="tea shop landing page" loading="lazy">
-                    </div>
-                    <div class="card-body order-2">
-                        <div class="card-title">Tea Shop Menu</div>
+            <div class="container-fluid portfolio__mobile">
+                <h2>Portfolio</h2>
+                <div class="card card-gradient">
+                    <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685900/tanktoptaro.github.io/tea-house_t7o4v0.jpg" alt="tea shop landing page" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Tea Shop Menu</h5>
                         <p class="card-text">A very simple landing page</p>
-                        <p class="card-text card-text--2">HTML, CSS</p>
+                        <p class="card-text"><small>HTML & CSS</small></p>
+                        <a href="https://tanktoptaro.github.io/teashop-landing-page/" target="_blank" class="btn">See more</a>
                     </div>
                 </div>
-                <div class="card d-flex flex-row">
-                    <div class="card-image order-2">
-                        <img class="img-fluid " src="./images/dog-photo-blog.jpg" alt="dog photo blog" loading="lazy">
-                    </div>
-                    <div class="card-body order-1">
-                        <div class="card-title">Dog Photo Blog</div>
-                        <p class="card-text">A gallery page with lots of dogs</p>
-                        <p class="card-text card-text--2">HTML, CSS, Bootstrap, Cloudinary</p>
+                <div class="card card-gradient">
+                    <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685896/tanktoptaro.github.io/dog-photo-blog_au8ct0.jpg" alt="dog photo blog" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Dog Photo Blog</h5>
+                        <p class="card-text">Gallery with lots of dogs</p>
+                        <p class="card-text"><small>HTML & CSS, Bootstrap, Cloudinary</small></p>
+                        <a href="https://tanktoptaro.github.io/dog-photo-blog/" target="_blank" class="btn">See more</a>
                     </div>
                 </div>
-                <div class="card d-flex flex-row">
-                    <div class="card-image">
-                        <img class="img-fluid order-1" src="./images/portfolio-site.jpg" alt="portfolio site" loading="lazy">
+                <div class="card card-gradient">
+                    <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/portfolio-site_kq4qlf.jpg" alt="portfolio site" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Portfolio Site</h5>
+                        <p class="card-text">From Wireframe to HTML</p>
+                        <p class="card-text"><small>HTML & CSS, Bootstrap, Figma</small></p>
+                        <a href="https://tanktoptaro.github.io/portfolio-site/" target="_blank" class="btn">See more</a>
                     </div>
-                    <div class="card-body order-2">
-                        <div class="card-title">Portfolio Site</div>
-                        <p class="card-text">From wireframe to HTML</p>
-                        <p class="card-text card-text--2">Figma, HTML, CSS, Bootstrap</p>
+                </div>
+                <div class="card card-gradient">
+                    <img src="https://res.cloudinary.com/delgya5vj/image/upload//w_1000,h_1000,c_limit/v1678741939/simpe-resume_fsynst.jpg" alt="simple resume" class="card-img">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Tea Shop Menu</h5>
+                        <p class="card-text">A very simple landing page</p>
+                        <p class="card-text"><small>HTML & CSS</small></p>
+                        <a href="https://tanktoptaro.github.io/simple-resume/" target="_blank" class="btn">See more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid portfolio__desktop">
+                <h2>Portfolio</h2>
+                <div class="row">
+                    <div class="col card card-gradient">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685900/tanktoptaro.github.io/tea-house_t7o4v0.jpg" alt="tea shop landing page" class="card-img">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Tea Shop Menu</h5>
+                            <p class="card-text">A very simple landing page</p>
+                            <p class="card-text"><small>HTML & CSS</small></p>
+                            <a href="https://tanktoptaro.github.io/teashop-landing-page/" target="_blank" class="btn">See more</a>
+                        </div>
+                    </div>
+                    <div class="col card card-gradient">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685896/tanktoptaro.github.io/dog-photo-blog_au8ct0.jpg" alt="dog photo blog" class="card-img">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Dog Photo Blog</h5>
+                            <p class="card-text">Gallery with lots of dogs</p>
+                            <p class="card-text"><small>HTML & CSS, Bootstrap, Cloudinary</small></p>
+                            <a href="https://tanktoptaro.github.io/dog-photo-blog/" target="_blank" class="btn">See more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col card card-gradient">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/portfolio-site_kq4qlf.jpg" alt="portfolio site" class="card-img">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Portfolio Site</h5>
+                            <p class="card-text">From Wireframe to HTML</p>
+                            <p class="card-text"><small>HTML & CSS, Bootstrap, Figma</small></p>
+                            <a href="https://tanktoptaro.github.io/portfolio-site/" target="_blank" class="btn">See more</a>
+                        </div>
+                    </div>
+                    <div class="col card card-gradient">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload//w_1000,h_1000,c_limit/v1678741939/simpe-resume_fsynst.jpg" alt="simple resume" class="card-img">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Tea Shop Menu</h5>
+                            <p class="card-text">A very simple landing page</p>
+                            <p class="card-text"><small>HTML & CSS</small></p>
+                            <a href="https://tanktoptaro.github.io/simple-resume/" target="_blank" class="btn">See more</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -234,64 +274,113 @@
     <!-- ---------------     </PORTFOLIO SECTION>       --------------- -->
 
     <!-- ---------------     <BLOG SECTION>        --------------- -->
-    <section class="blog text-lg-start" id="blog">
-        <div class="container-fluid blog__div">
-            <div class="container">
-                <h3>BLOG</h3>
-                <div id="carouselExampleIndicators" class="carousel slide">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <section class="writeup text-lg-start" id="writeup">
+        <div class="container-fluid writeup__div">
+            <div class="container-fluid writeup__mobile">
+                <h2>WRITE UPS</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title carousel--title">OWASP Juice Shop | TryHackMe</h5>
+                        <p class="card-text">This room uses the Juice Shop vulnerable web application to learn how to identify and exploit common web application vulnerabilities.</p>
                     </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title carousel--title">OWASP Juice Shop | TryHackMe</h5>
-                                <p class="card-text">This room uses the Juice Shop vulnerable web application to learn how to identify and exploit common web application vulnerabilities.</p>
-                            </div>
-                            <img src="./images/juiceshop-banner.png" class="card-img-bottom" alt="thm-juice">
-                            <div class="card-body card-body--2">
-                                <a href="#" class="btn">Read More</a>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Web Enumeration | TryHackMe</h5>
-                                <p class="card-text">Learn the methodology of enumerating websites by using tools such as Gobuster, Nikto and WPScan.</p>
-                            </div>
-                            <img src="./images/webenumeration-banner.png" class="card-img-bottom" alt="dog-photo-blog">
-                            <div class="card-body card-body--2">
-                                <a href="#" class="btn">Read More</a>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Upload Vulnerabilities | TryHackMe</h5>
-                                <p class="card-text">Tutorial room exploring some basic file-upload vulnerabilities in websites.</p>
-                            </div>
-                            <img src="./images/upload-banner.png" class="card-img-bottom" alt="portfolio-site">
-                            <div class="card-body card-body--2">
-                                <a href="#" target="_blank" class="btn">Read More</a>
-                            </div>
-                        </div>
-                      </div>
+                    <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/juiceshop-banner_ly15zo.png" class="card-img-bottom" alt="thm-juice">
+                    <div class="card-body text-center">
+                        <a href="./writeup-owasp-juice-shop.html" target="_blank" class="btn">Read More</a>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
-                <a href="./blog.html" class="btn">See more</a>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Enumeration | TryHackMe</h5>
+                        <p class="card-text">Learn the methodology of enumerating websites by using tools such as Gobuster, Nikto and WPScan.</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685901/tanktoptaro.github.io/webenumeration-banner_ecpo2i.png" class="card-img-bottom" alt="dog-photo-blog">
+                    <div class="card-body text-center">
+                        <a href="./writeup-web-enumeration.html" target="_blank" class="btn">Read more</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Upload Vulnerabilities | TryHackMe</h5>
+                        <p class="card-text">Tutorial room exploring some basic file-upload vulnerabilities in websites.</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685900/tanktoptaro.github.io/upload-banner_apmydy.png" class="card-img-bottom" alt="portfolio-site">
+                    <div class="card-body text-center">
+                        <a href="./writeup-upload-vulnerabilities.html" target="_blank" class="btn">Read More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pickle Rick | TryHackMe</h5>
+                        <p class="card-text">A Rick and Morty CTF. Help turn Rick back into a human!</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1679184132/pickle-rick-banner_nvalsh.png" class="card-img-bottom" alt="portfolio-site">
+                    <div class="card-body text-center">
+                        <a href="#" target="_blank" class="btn disabled" aria-disabled="true">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid writeup__desktop">
+                <h2>WRITE UPS</h2>
+                <div class="container carousel slide" id="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title carousel--title">OWASP Juice Shop | TryHackMe</h5>
+                                    <p class="card-text">This room uses the Juice Shop vulnerable web application to learn how to identify and exploit common web application vulnerabilities.</p>
+                                </div>
+                                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/juiceshop-banner_ly15zo.png" class="card-img-bottom" alt="thm-juice">
+                                <div class="card-body text-center">
+                                    <a href="./writeup-owasp-juice-shop.html" target="_blank" class="btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Web Enumeration | TryHackMe</h5>
+                                    <p class="card-text">Learn the methodology of enumerating websites by using tools such as Gobuster, Nikto and WPScan.</p>
+                                </div>
+                                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685901/tanktoptaro.github.io/webenumeration-banner_ecpo2i.png" class="card-img-bottom" alt="dog-photo-blog">
+                                <div class="card-body text-center">
+                                    <a href="./writeup-web-enumeration.html" target="_blank" class="btn">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Upload Vulnerabilities | TryHackMe</h5>
+                                    <p class="card-text">Tutorial room exploring some basic file-upload vulnerabilities in websites.</p>
+                                </div>
+                                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685900/tanktoptaro.github.io/upload-banner_apmydy.png" class="card-img-bottom" alt="portfolio-site">
+                                <div class="card-body text-center">
+                                    <a href="./writeup-upload-vulnerabilities.html" target="_blank" class="btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pickle Rick | TryHackMe</h5>
+                                    <p class="card-text">A Rick and Morty CTF. Help turn Rick back into a human! | TBA</p>
+                                </div>
+                                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1679184132/pickle-rick-banner_nvalsh.png" class="card-img-bottom" alt="portfolio-site">
+                                <div class="card-body text-center">
+                                    <a href="#" target="_blank" class="btn disabled" aria-disabled="true">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                </div>
             </div>
         </div>
     </section>
@@ -300,11 +389,11 @@
     <!-- ---------------     <CONTACT SECTION>       --------------- -->
     <section class="contact text-lg-start" id="contact">
         <div class="container-fluid contact__div">
-            <div class="container">
-                <h3>CONTACT</h3>
+            <div class="container-fluid">
+                <h2>CONTACT</h2>
             </div>
-            <div class="container d-flex flex-column align-items-center contact__form">
-                <div class="form-floating">
+            <div class="container-fluid d-flex flex-column align-items-center contact__form">
+                <div class="form-floating mb-3">
                     <input type="text" class="form-control name" id="floatingInput" placeholder="Your Name" required>
                     <label for="floatingInput">Your Name</label>
                 </div>
@@ -312,7 +401,7 @@
                     <input type="email" class="form-control email" id="floatingInput" placeholder="E-mail Address" required>
                     <label for="floatingInput">E-mail Address</label>
                 </div>
-                <div class="form-floating">
+                <div class="form-floating mb-3">
                     <textarea class="form-control textarea" placeholder="Message" id="floatingTextarea" required></textarea>
                     <label for="floatingTextarea">Message</label>
                 </div>
@@ -323,25 +412,26 @@
         </div>
     </section>
     <!-- ---------------     </CONTACT SECTION>       --------------- -->
-
+    
     <!-- ---------------     <FOOTER SECTION>        --------------- -->
-    <footer class="text-center text-lg-start text-muted">
+    <footer class="text-left text-lg-start text-muted">
         <section class="footer">
-            <div class="container-fluid text-center text-md-start mt-5">
+            <div class="container-fluid text-left text-md-start mt-5">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <h6>Kevin</h6>
-                        <p>This site has a lot of shortcoming. My design skills is dreadful.</p>
+                        <h5>Kevin</h5>
+                        <p>I'll add more content to this portfolio in the future.</p>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6>Quick Links</h6>
+                        <h5>Quick Links</h5>
                         <p><a href="#">HOME</a></p>
-                        <p><a href="#">ABOUT ME</a></p>
-                        <p><a href="#">PORTFOLIO</a></p>
-                        <p><a href="#">BLOG</a></p>
+                        <p><a href="#about">ABOUT ME</a></p>
+                        <p><a href="#portfolio">PORTFOLIO</a></p>
+                        <p><a href="#writeup">WRITE UPS</a></p>
+                        <p><a href="#contact">CONTACT</a></p>
                     </div>
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <h6>Contact</h6>
+                        <h5>Contact</h5>
                         <p><i class="fa-solid fa-house"></i>&emsp;31-36 Carnation St., Neo Calapan Subd., Brgy. Bulusan, Calapan City, Or. Mindoro, 5200</p>
                         <p><i class="fa-solid fa-phone"></i>&emsp;+63-998-4268-980</p>
                         <p><i class="fa-solid fa-envelope"></i>&emsp;balmoresk3v1n@gmail.com</p>
@@ -354,7 +444,33 @@
         </section>
     </footer>
     <!-- ---------------     </FOOTER SECTION>       --------------- -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="./js/progressbar.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+            ) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+            }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

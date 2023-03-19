@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Up | TryHackMe | Web Enumeration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/be38a31748.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- ---------------     <NAVIGATION BAR>       --------------- -->
+    <nav class="navbar navbar-dark navbar-expand-md">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header" data-bs-theme="dark">
+                <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item"><a class="nav-link" href="./index.html#hero">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#about">ABOUT ME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#portfolio">PORTFOLIO</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./index.html#writeup">WRITE UPS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ---------------     </NAVIGATION BAR>      --------------- -->
+    <section class="writeup-page">
+        <div class="container-fluid writeup__title">
+            <div class="container">
+                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685901/tanktoptaro.github.io/webenumeration-banner_ecpo2i.png" alt="">
+                <h1><span>Web Enumeration</span> | THM</h1>
+                <p>February 15, 2023</p>
+            </div>
+        </div>
+        <div class="container-fluid writeup__content">
+            <div class="container">
+                <h5>Practical: Gobuster</h5>
+                <p class="question">Run a directory scan on the host. Other than the standard css, image and js directories, what other directories are available?</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685901/tanktoptaro.github.io/b2-task-1_kw5mpd.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685901/tanktoptaro.github.io/b2-task-1_kw5mpd.png" alt="">    
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685901/tanktoptaro.github.io/b2-task-2_gk8qht.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685901/tanktoptaro.github.io/b2-task-2_gk8qht.png" alt=""> 
+                    </a>
+                       
+                </div>
+                
+        
+                <p class="question">Run a directory scan on the host. In the <b>C******</b> directory, what file extensions exists?</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685901/tanktoptaro.github.io/b2-task-3_b3q3dd.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685901/tanktoptaro.github.io/b2-task-3_b3q3dd.png" alt="">   
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-4_egkw0k.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-4_egkw0k.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <p class="question">There's a flag out there that can be found by directory scanning! Find it!</p>
+                <p>The easier way to do this is by navigating through the directories we found in the previous scans.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-5_akblmi.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-5_akblmi.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <p class="question">There are some virtual hosts running on this server. What are they?</p>
+                <p>Since Gobuster is not giving me the result that I wanted, I decided to look for a way around the problem and find that <b>ffuf</b> works. So I used that for this problem.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685891/tanktoptaro.github.io/b2-task-6_q114tz.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685891/tanktoptaro.github.io/b2-task-6_q114tz.png" alt="">    
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-7_anfnjt.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-7_anfnjt.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <p class="question">There's another flag to be found in one of the virtual hosts! Find it!</p>
+                <div class="card">
+                    <a href=""https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-8_f1k1ha.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-8_f1k1ha.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>The code above will perform a Gobuster scan against both vhost at once.</p>
+                <div class="card">
+                    <a href=""https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-9_ya2mqq.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-9_ya2mqq.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>Once you got the path you can just browse to it to see the flag.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-10_bodyzn.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-10_bodyzn.png" alt="">    
+                    </a>
+                </div>
+                
+                
+                <h5>Practical: WPScan</h5>
+                <p class="question">Enumerate the site, what is the name of the theme that is detected as running?</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-11_kfrrv4.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-11_kfrrv4.png" alt="">    
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-12_lgx11r.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-12_lgx11r.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <p class="question">Enumerate the site, what is the name of the plugin that WPScan has found?</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-13_sdsf7g.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-13_sdsf7g.png" alt="">    
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685892/tanktoptaro.github.io/b2-task-14_nlfiro.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685892/tanktoptaro.github.io/b2-task-14_nlfiro.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <p class="question">Enumerate the site, what username can WPScan find?</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-15_swfn6u.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-15_swfn6u.png" alt="">    
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-16_z4nxgl.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-16_z4nxgl.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <p class="question">Construct a WPScan command to brute-force the site with this username, using the <b>rockyou wordlist</b> as the password list. What is the password to this user?</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-17_stnk7m.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-17_stnk7m.png" alt="">    
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-18_a7ukvt.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-18_a7ukvt.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <h5>Practical: Nikto</h5>
+                <p class="question">What is the name & version of the web server that Nikto has determined running of <b>port 80</b>?</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-19_ycpery.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-19_ycpery.png" alt="">    
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-20_pgor67.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-20_pgor67.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <p class="question">There is another web server running on another port. What is the name & version of this web server?</p>
+                <p>You can do a nmap scan first to see which ports are open.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-21_s219h7.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-21_s219h7.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>Now you can scan it with nikto.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-22_uf53g4.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-22_uf53g4.png" alt="">    
+                    </a>
+                </div>
+                
+        
+                <p class="question">What is the name of the Cookie that this JBoss server gives?</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685893/tanktoptaro.github.io/b2-task-23_aecjdg.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685893/tanktoptaro.github.io/b2-task-23_aecjdg.png" alt="">    
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+    </section>
+
+    <!-- ---------------     <FOOTER SECTION>        --------------- -->
+    <footer class="text-left text-lg-start text-muted">
+        <section class="footer">
+            <div class="container-fluid text-left text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h5>Kevin</h5>
+                        <p>This site has a lot of shortcoming. My design skills is dreadful.</p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h5>Quick Links</h5>
+                        <p><a href="./index.html">HOME</a></p>
+                        <p><a href="./index.html#about">ABOUT ME</a></p>
+                        <p><a href="./index.html#portfolio">PORTFOLIO</a></p>
+                        <p><a href="./index.html#writeup">WRITE UPS</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h5>Contact</h5>
+                        <p><i class="fa-solid fa-house"></i>&emsp;31-36 Carnation St., Neo Calapan Subd., Brgy. Bulusan, Calapan City, Or. Mindoro, 5200</p>
+                        <p><i class="fa-solid fa-phone"></i>&emsp;+63-998-4268-980</p>
+                        <p><i class="fa-solid fa-envelope"></i>&emsp;balmoresk3v1n@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                <p>&copy; 2023, Kevin Balmores</p>
+            </div>
+        </section>
+    </footer>
+    <!-- ---------------     </FOOTER SECTION>       --------------- -->
+    <script src="./js/script.js"></script>
+    <script>
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+            ) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+            }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

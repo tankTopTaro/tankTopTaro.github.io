@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Up | TryHackMe | Upload Vulnerabilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+    <script src="https://kit.fontawesome.com/be38a31748.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- ---------------     <NAVIGATION BAR>       --------------- -->
+    <nav class="navbar navbar-dark navbar-expand-md">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header" data-bs-theme="dark">
+                <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item"><a class="nav-link" href="./index.html#hero">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#about">ABOUT ME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#portfolio">PORTFOLIO</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./index.html#writeup">WRITE UPS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <!-- ---------------     </NAVIGATION BAR>      --------------- -->
+    <section class="writeup-page">
+        <div class="container-fluid writeup__title">
+            <div class="container">
+                <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685900/tanktoptaro.github.io/upload-banner_apmydy.png" alt="">
+                <h2><span>Upload Vulnerabilities</span> | THM</h2>
+                <p>March 3, 2023</p>
+            </div>
+        </div>
+        <div class="container-fluid writeup__content">
+            <div class="container">
+                <h5>Challenge</h5>
+                <p>Head over to <b>jewel.uploadvulns.thm</b> and try to get the flag in <b>/var/www</b>.</p>
+                <p><span>Note</span>: Not all webserver have PHP backend.</p>
+                <p class="question">Recon:</p>
+                <p>Start a directory scan using Gobuster.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685894/tanktoptaro.github.io/b3-task-1_hssat8.png">
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685894/tanktoptaro.github.io/b3-task-1_hssat8.png" alt="">
+                    </a>
+                </div>
+                
+                <p>While Gobuster is scanning go to the homepage and try to inspect it with the Debugger. Look for javascript files that acts as the filter for the files.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685894/tanktoptaro.github.io/b3-task-2_j8lumo.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685894/tanktoptaro.github.io/b3-task-2_j8lumo.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>Also check what web server the site is using.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685894/tanktoptaro.github.io/b3-task-3_grolhx.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685894/tanktoptaro.github.io/b3-task-3_grolhx.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>The Gobuster scan gives us two pages we can use for the attack.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685894/tanktoptaro.github.io/b3-task-4_oy8oig.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685894/tanktoptaro.github.io/b3-task-4_oy8oig.png" alt="">    
+                    </a>
+                </div>
+                
+                
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685894/tanktoptaro.github.io/b3-task-5_jjar0i.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685894/tanktoptaro.github.io/b3-task-5_jjar0i.png" alt="">    
+                    </a>
+                </div>
+                
+    
+                <p class="question">Test run: Uploading an innocent file.</p>
+                <p>We know that the page accept jpeg files. So we'll try to upload this file.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685894/tanktoptaro.github.io/b3-task-6_xgus5c.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685894/tanktoptaro.github.io/b3-task-6_xgus5c.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>Do another directory scan to see where our file is uploaded</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685895/tanktoptaro.github.io/b3-task-7_mwzbqg.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/b3-task-7_mwzbqg.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>If we go to the <b>/content/image-file-name.jpg</b> we can see that our file is successfully uploaded.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685895/tanktoptaro.github.io/b3-task-8_nkotnu.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/b3-task-8_nkotnu.png" alt="">    
+                    </a>
+                </div>
+                
+                <p class="question">Uploading a malicious file.</p>
+                <p>Using <b>Burp</b> intercept the response for the <b>upload.js</b></p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685895/tanktoptaro.github.io/b3-task-9_fspmgq.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/b3-task-9_fspmgq.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>Modify the response to bypass the client-side filter.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685895/tanktoptaro.github.io/b3-task-10_hljlhm.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/b3-task-10_hljlhm.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>Try to upload a malicious file, and find its name by scanning the content directory.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685895/tanktoptaro.github.io/b3-task-11_bttrlv.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/b3-task-11_bttrlv.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>Start your Netcat listener and once you found the name of you shell go to the <b>/admin</b> page and try to access the file from there.</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685895/tanktoptaro.github.io/b3-task-12_mbvp8j.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/b3-task-12_mbvp8j.png" alt="">    
+                    </a>
+                </div>
+                
+                <p>See if Netcat connects to the shell and then navigate to where the flag is</p>
+                <div class="card">
+                    <a href="https://res.cloudinary.com/delgya5vj/image/upload/v1678685895/tanktoptaro.github.io/b3-task-13_hzh1ar.png" >
+                        <img src="https://res.cloudinary.com/delgya5vj/image/upload/w_1000,h_1000,c_limit/v1678685895/tanktoptaro.github.io/b3-task-13_hzh1ar.png" alt="">    
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+    </section>
+
+    <!-- ---------------     <FOOTER SECTION>        --------------- -->
+    <footer class="text-left text-lg-start text-muted">
+        <section class="footer">
+            <div class="container-fluid text-left text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h5>Kevin</h5>
+                        <p>This site has a lot of shortcoming. My design skills is dreadful.</p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h5>Quick Links</h5>
+                        <p><a href="./index.html">HOME</a></p>
+                        <p><a href="./index.html#about">ABOUT ME</a></p>
+                        <p><a href="./index.html#portfolio">PORTFOLIO</a></p>
+                        <p><a href="./index.html#writeup">WRITE UPS</a></p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h5>Contact</h5>
+                        <p><i class="fa-solid fa-house"></i>&emsp;31-36 Carnation St., Neo Calapan Subd., Brgy. Bulusan, Calapan City, Or. Mindoro, 5200</p>
+                        <p><i class="fa-solid fa-phone"></i>&emsp;+63-998-4268-980</p>
+                        <p><i class="fa-solid fa-envelope"></i>&emsp;balmoresk3v1n@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                <p>&copy; 2023, Kevin Balmores</p>
+            </div>
+        </section>
+    </footer>
+    <!-- ---------------     </FOOTER SECTION>       --------------- -->
+    <script src="./js/script.js"></script>
+    <script>
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+            ) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+            }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            mybutton.addEventListener("click", backToTop);
+
+            function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
