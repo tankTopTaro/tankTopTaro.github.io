@@ -2,7 +2,7 @@
 ---
 
 ### [tanktoptaro.github.io](https://tanktoptaro.github.io/)
-### [Figma Design PDF](https://drive.google.com/file/d/1PRvVluyxFejo9PoQFJfps5XNRp1S2MfR/view?usp=share_link)
+### [Figma Design PDF](https://drive.google.com/file/d/1jmmTpEm8tdFxssiDNvoDb_XuoU-o4rBD/view?usp=sharing)
 
 ---
 
