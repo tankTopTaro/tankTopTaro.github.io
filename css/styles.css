@@ -713,11 +713,12 @@ body {
 
     .navbar .nav-link.active {
         color: var(--action-color);
+        padding-bottom: 1em;
+        background-color: var(--navbar-color);
     }
 
     .hero {
         height: 100vh;
-        
     }
 
     .hero .hero__text hr {
@@ -1030,6 +1031,8 @@ body {
 
     .navbar .nav-link.active {
         color: var(--action-color);
+        padding-bottom: 1em;
+        background-color: var(--navbar-color);
     }
 
     .hero {
@@ -1348,11 +1351,12 @@ body {
 
     .navbar .nav-link.active {
         color: var(--action-color);
+        padding-bottom: 1em;
+        background-color: var(--navbar-color);
     }
 
     .hero {
         height: 110vh;
-        
     }
 
     .hero .hero__text hr {
