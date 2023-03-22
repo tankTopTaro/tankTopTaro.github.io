@@ -3,7 +3,6 @@
 
 ### [tanktoptaro.github.io](https://tanktoptaro.github.io/)
 ### [Figma Design PDF](https://drive.google.com/file/d/1jmmTpEm8tdFxssiDNvoDb_XuoU-o4rBD/view?usp=sharing)
-
 ---
 
 ## PROJECT GOALS / Services provided by application
